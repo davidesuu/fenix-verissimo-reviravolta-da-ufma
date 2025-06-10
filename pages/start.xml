@@ -1,19 +1,21 @@
-<page id="start" bg_image="tech-bg-lab.png" bg_music="osts-vilo.mp3">
+<page id="start" bg_image="ta_back_fate.png" bg_music="osts-vilo.mp3">
   <agent
     id="teste"
-    text="Hello World"
+    text="Mumei"
     color="white"
     x="center"
-    y="center"
+    y="90"
     font-size="70"
   />
 
   <agent
     id="next_page_text"
     text="Proxima Pagina"
-    animation="glitch"
-    y="480"
-    x="640"
-    on_click="goToPage('middle')"
+    animation=""
+    color="white"
+    y="490"
+    x="center"
+    font-size="30"
+    on_click="goToPage('prologue')"
   />
 </page>
