@@ -1,3 +1,11 @@
 <page id="prologue" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página prologue" color="white" font-size="24" />
+  <agent id="titulo" x="center" y="center" text="Página prologue" color="white" font-size="24" 
+    />
+  <agent
+    id="135"
+    image="forest-attack-9.png"
+    x = "center"
+    
+    />
+    
 </page>
