@@ -4,5 +4,26 @@
     text="aa"
     x="100"
     y="65"
+    on_click="dialogue_next_1, $dialogue_next_1 + 1)"
     />
+
+  <fab-if when="$dialogue_next_1 = 0">
+    <agent
+      id="dialogue_1"
+      text="oiii"
+      x="36"
+      y="386"
+      animation="typewriter"
+      />
+    </fab-if>
+  
+  <fab-if when="$dialogue_next_1 = 1">
+    <agent
+      id="dialogue_2"
+      text="olaaa,olaaaa"
+      x="36"
+      y="386"
+      animation="typewriter"
+      />
+  </fab-if>
 </page>
