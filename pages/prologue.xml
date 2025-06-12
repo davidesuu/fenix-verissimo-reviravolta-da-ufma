@@ -20,7 +20,7 @@
     />
     </fab-if>
 
-  <fab-if when="$dialogue_next = 1">
+  <fab-if when="$dialogue_next=1">
     <agent
     id="dialogue_2"
     text='"Not felling too good right now...sorry"'
