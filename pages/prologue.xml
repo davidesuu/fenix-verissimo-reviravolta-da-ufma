@@ -1,13 +1,22 @@
 <page id="prologue" bg_image="prologue_1.jpg">
+
+  <agent 
+  id="next_page"
+  text="oi"
+  font-size="1000"
+  on_click="set(dialogue_prog+1)"  />  
   
   <fab-if when = "$dialogue_prog=0">
     <agent 
     id="dialogue_1"
-    text = "so...you are not coming with us?"
-    
+    text = '"so...are you not coming with us?"'
+    x = '36'
+    y = '390'
+    font-size=""
+    animation="typewriter"
     />
+    </fab-if>
 
-
-    
-  </fab-if>  
+  <fab-if when = "$dialogue_prog=1"
+    </fab-if>
 </page>
