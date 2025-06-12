@@ -18,5 +18,7 @@
     </fab-if>
 
   <fab-if when = "$dialogue_prog=1"
+    <agent
+    text="a"
     </fab-if>
 </page>
