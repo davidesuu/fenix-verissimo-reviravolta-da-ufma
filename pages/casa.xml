@@ -4,7 +4,7 @@
     text="aa"
     x="100"
     y="65"
-    on_click="dialogue_next_2, $dialogue_next_2 + 1)"
+    on_click="set(dialogue_next_2, $dialogue_next_2 + 1)"
     />
 
   <fab-if when="$dialogue_next_2 = 0">
