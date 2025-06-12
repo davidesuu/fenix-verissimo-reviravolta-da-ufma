@@ -13,7 +13,7 @@
     <agent
     id="dialo"
     text="oii"
-    x='59'
+    x="59"
     anim animation="typewriter"
     />
   </fab-if>
