@@ -1,8 +1,13 @@
-<page 
-  id="prologue" bg_image="prologue_1.jpg">
-  <fab-if when = "$dialogue_prog"="0">
+<page id="prologue" bg_image="prologue_1.jpg">
+  
+  <fab-if when = "$dialogue_prog=0">
     <agent 
     id="dialogue_1"
+    text = "so...you are not coming with us?"
+    
     />
+
+
+    
   </fab-if>  
 </page>
