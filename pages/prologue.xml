@@ -4,9 +4,9 @@
   id="next_page"
   text="oi"
   font-size="1000"
-  on_click="set(dialogue_prog+1)"  />  
+  on_click="set(dialogue_next+1)"  />  
   
-  <fab-if when = "$dialogue_prog=0">
+  <fab-if when = "$dialogue_next = 0">
     <agent 
     id="dialogue_1"
     text = '"so...are you not coming with us?"'
@@ -17,8 +17,10 @@
     />
     </fab-if>
 
-  <fab-if when = "$dialogue_prog=1"
+  <fab-if when = "$dialogue_next = 1">
     <agent
     text="a"
+    />
     </fab-if>
+    
 </page>
