@@ -1,3 +1,28 @@
-<page id="prologue_1" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página prologue_1" color="white" font-size="24" />
+<page id="prologue_1" bg_color="yellow">
+   <agent 
+  id="next_page"
+  text="o"
+  font-size="45"
+  y = '45'
+  x = '80'
+  color="black"
+  on_click="set(dialogue_next, $dialogue_next+1)"  
+     />  
+
+  <fab-if when="$dialogue_next=0">
+    <agent
+    id="dialo"
+    text="oii"
+    x='59'
+    anim animation="typewriter"
+    />
+  </fab-if>
+
+  <fab-if when="$dialogue_next=1">
+    <agent
+    id="dialog"
+    text="oii"
+    x = '59'
+    />
+  </fab-if>
 </page>
