@@ -1,3 +1,8 @@
 <page id="casa" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página casa" color="white" font-size="24" />
+  <agent 
+    id="next_page"
+    text="aa"
+    x="100"
+    y="65"
+    />
 </page>
