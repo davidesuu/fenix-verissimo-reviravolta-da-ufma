@@ -1,4 +1,4 @@
-<page id="prologue_part2" bg_color="black">
+<page id="prologue_part2" bg_image="prologue_1.jpg">
   <agent 
     id="dialogue_click"
     text="O"
@@ -22,6 +22,7 @@
       text="olaaa, ollaaaaa"
       x="36"
       y="390"
+      animation="typewriter"
       />
   </fab-if>
   
