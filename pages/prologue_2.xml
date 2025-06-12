@@ -1,3 +1,15 @@
 <page id="prologue_2" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página prologue_2" color="white" font-size="24" />
+   <agent 
+  id="next_page"
+  text="o"
+  font-size="1000"
+  y = '45'
+  x = '80'
+  color="black"
+  on_click="set(dialogue_next, $dialogue_next+1)"  />  
+
+  <fable-if when="$dialogue_next=0"
+    
+    <fable-if/>
+
 </page>
