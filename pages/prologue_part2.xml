@@ -4,8 +4,8 @@
     text="O"
     x="500"
     on_click="set(dialogue_next_1, $dialogue_next_1+1)"
-    />
-  <fab-if when="$dialogue_next_1=0">
+  />
+  <fab-if when=when="$dialogue_next_1 =0 ">
     <agent
       id="dialogo_1"
       text="oii"
