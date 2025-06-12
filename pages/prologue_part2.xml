@@ -3,9 +3,9 @@
     id="dialogue_click"
     text="O"
     x="500"
-    on_click="set(dialogue_next_1, $dialogue_next_1+1)"
+    on_click="set(dialogue_next_1, $dialogue_next_1 + 1)"
   />
-  <fab-if when=when="$dialogue_next_1 =0 ">
+  <fab-if when="$dialogue_next_1 = 0">
     <agent
       id="dialogo_1"
       text="oii"
@@ -15,7 +15,7 @@
       />
   </fab-if>
 
-  <fab-if when="%dialogue_next_1=1">
+  <fab-if when="%dialogue_next_1 = 1">
     <agent
       id="dialogo_2"
       text="olaaa"
