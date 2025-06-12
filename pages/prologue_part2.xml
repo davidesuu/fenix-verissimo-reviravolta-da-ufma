@@ -1,7 +1,27 @@
-<page id="prologue_part2" bg_color="yellow">
+<page id="prologue_part2" bg_color="black">
   <agent 
     id="dialogue_click"
-    text text="O"
-    x="10"
+    text="O"
+    x="500"
+    on_click="set(dialogue_next_1, $dialogue_next_1+1)"
     />
+  <fab-if when="$dialogue_next_1=0">
+    <agent
+      id="dialogo_1"
+      text="oii"
+      x="36"
+      y="390"
+      animation="typewriter"
+      />
+  </fab-if>
+
+  <fab-if when="%dialogue_next_1=1">
+    <agent
+      id="dialogo_2"
+      text="olaaa"
+      x="36"
+      y="390"
+      />
+  </fab-if>
+  
 </page>
