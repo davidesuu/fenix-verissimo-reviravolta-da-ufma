@@ -1,3 +1,8 @@
-<page id="prologue_part2" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página prologue_part2" color="white" font-size="24" />
+<page id="prologue_part2" bg_color="yellow">
+  <agent 
+    id="dialogue_click"
+    on_click="set(dialogue_next, $dialogue_next+1)"
+    text text="O"
+    x="10"
+    />
 </page>
