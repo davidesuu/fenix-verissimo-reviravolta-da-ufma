@@ -1,7 +1,6 @@
 <page id="prologue_part2" bg_color="yellow">
   <agent 
     id="dialogue_click"
-    on_click="set(dialogue_next_1, $dialogue_next_1+1)"
     text text="O"
     x="10"
     />
