@@ -1,12 +1,8 @@
 <page 
-  id="prologue" bg_color="blue">
-  <agent id="titulo" x="center" y="center" text="Página prologue" color="white" font-size="24" 
-    />
-  <agent
-    id="135"
-    image="pngegg.png"
-    x = "center"
-    
-    />
-    
+  id="prologue" bg_image="prologue_1.jpg">
+  <fab-if when = dialogue_1="0">
+  <agent 
+  id="dialogue_1"
+  />
+  </fab-if>  
 </page>
