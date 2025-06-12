@@ -6,7 +6,8 @@
   y = '45'
   x = '80'
   color="black"
-  on_click="set(dialogue_next, $dialogue_next+1)"  />  
+  on_click="set(dialogue_next, $dialogue_next+1)"  
+     />  
 
   <fab-if when="$dialogue_next=0">
     <agent
