@@ -1,7 +1,7 @@
 <fable>
   <config font-family="Schoolbell" />
 
-  <property name="dialogue_prog" default="0" />
+  <property name="dialogue_next" default="0" />
   <property name="pontuacao" default="0" />
   <property name="visitante" default="Aventureiro" />
 
