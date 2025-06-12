@@ -8,8 +8,11 @@
   color="black"
   on_click="set(dialogue_next, $dialogue_next+1)"  />  
 
-  <fable-if when="$dialogue_next=0"
-    
-    <fable-if/>
+  <fab-if when="$dialogue_next=0">
+    <agent
+    id='dialo'
+    text='oii'
+    />
+  </fab-if>
 
 </page>
