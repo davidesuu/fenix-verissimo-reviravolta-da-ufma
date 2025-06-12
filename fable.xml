@@ -1,5 +1,5 @@
 <fable>
-  <config font-family="Schoolbell" />
+  <config font-family="Poppins" />
 
   <property name="dialogue_next" default="0" />
   <property name="dialogue_next_1" default="0" />
