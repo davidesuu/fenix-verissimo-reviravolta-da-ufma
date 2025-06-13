@@ -4,9 +4,8 @@
   <property name="dialogue_next" default="0" />
   <property name="dialogue_next_1" default="0" />
   <property name="dialogue_next_2" default="0" />
-  <property name="pontuacao" default="0" />
-  <property name="visitante" default="Aventureiro" />
   <property name="objection" default="0" />
+  <property name="obejection_timing" default="0" />
 
   <start />
   <prologue />
