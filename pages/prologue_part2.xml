@@ -1,19 +1,208 @@
-<page id="prologue_part2" bg_image="prologue_1.jpg">
- <fab-if when="$dialogue_next = 1">
-    <agent 
-      id="fala_continua"
-      text="Parte 2 - O dialogue_next ainda está em 1"
-      x="36" 
-      y="390" 
+<page id="prologue_part2" bg_image="prologue_1.jpg" bg_music="06. Phoenix Wright - Objection! 2001.mp3">
+
+  <!-- ======================== -->
+  <!-- OBJECTION: IMAGEM -->
+  <!-- ======================== -->
+  <fab-if when="show_objection_img=true">
+    <agent
+      id="obj_img_2"
+      image="cemetery-skeleton.png"
+      x="center"
+      y="center"
+      animation="bounce-in"
     />
   </fab-if>
 
-  <fab-if when="$dialogue_next != 1">
+  <!-- OBJECTION: Botão -->
+  <agent
+    id="objection_2"
+    text="OBJECTION!"
+    x="34"
+    y="100"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3')"
+  />
+
+  <!-- ======================== -->
+  <!-- Controle Inicial -->
+  <!-- ======================== -->
+  <fab-if when="$dialogue_next = 0">
     <agent 
-      id="fala_reseta"
-      text="Parte 2 - O dialogue_next NÃO está em 1 (ou seja, ele resetou)"
+      id="start_part2"
+      text="Parte 2 - Início"
+      x="36"
+      y="390"
+    />
+    <agent 
+      id="next_start"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next, 1);playSound('typing.mp3')"
+    />
+  </fab-if>
+
+  <!-- ======================== -->
+  <!-- Fala 1 -->
+  <!-- ======================== -->
+  <fab-if when="$dialogue_next = 1 and $objection_timing != 1">
+    <agent 
+      id="fala1_p2" 
+      text='"Fala normal da parte 2 - primeira fala."' 
       x="36" 
       y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_1_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next, 2);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <!-- Objection na Fala 1 -->
+  <fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 0">
+    <agent 
+      id="obj1_p2" 
+      text='"Intervenção da Parte 2, fala 1."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_obj1_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 1">
+    <agent 
+      id="resposta1_p2" 
+      text='"Resposta depois do objection da fala 1."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_resposta1_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next, 2); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <!-- ======================== -->
+  <!-- Fala 2 -->
+  <!-- ======================== -->
+  <fab-if when="$dialogue_next = 2 and $objection_timing != 2">
+    <agent 
+      id="fala2_p2" 
+      text='"Segunda fala da Parte 2."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_2_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next, 3);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <!-- Objection na Fala 2 -->
+  <fab-if when="$dialogue_next = 2 and $objection_timing = 2 and $objection_stage = 0">
+    <agent 
+      id="obj2_p2" 
+      text='"Intervenção da Parte 2, fala 2."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_obj2_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 2 and $objection_timing = 2 and $objection_stage = 1">
+    <agent 
+      id="resposta2_p2" 
+      text='"Resposta depois do objection da fala 2."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_resposta2_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next, 3); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <!-- ======================== -->
+  <!-- Fala 3 -->
+  <!-- ======================== -->
+  <fab-if when="$dialogue_next = 3 and $objection_timing != 3">
+    <agent 
+      id="fala3_p2" 
+      text='"Terceira fala da Parte 2."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_3_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="goToPage('prologue_part3')" 
+    />
+  </fab-if>
+
+  <!-- Objection na Fala 3 -->
+  <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 0">
+    <agent 
+      id="obj3_p2" 
+      text='"Intervenção da Parte 2, fala 3."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_obj3_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3')" 
+    />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 1">
+    <agent 
+      id="resposta3_p2" 
+      text='"Resposta depois do objection da fala 3."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent  
+      id="next_end_p2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="goToPage('prologue_part3')" 
     />
   </fab-if>
 
