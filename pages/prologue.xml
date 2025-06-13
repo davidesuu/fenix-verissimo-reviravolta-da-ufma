@@ -1,5 +1,10 @@
 <page id="prologue" bg_image="prologue_1.jpg">
   
+  <fab-if when=music_on>
+  <agent id="new_agent" on_click= />
+
+
+   <!-- OBJECTION: IMAGEM --> 
   <fab-if when="show_objection_img=true">
   <agent
     id="obj_imgg"
@@ -7,7 +12,6 @@
     x="center"
     y="center"
     animation="bounce-in"
-    
     />
   </fab-if>
 
