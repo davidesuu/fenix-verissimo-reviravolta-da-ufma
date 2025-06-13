@@ -1,8 +1,5 @@
 <page id="prologue" bg_image="prologue_1.jpg">
   
-  <fab-if when=music_on>
-  <agent id="new_agent" on_click= />
-
 
    <!-- OBJECTION: IMAGEM --> 
   <fab-if when="show_objection_img=true">
@@ -42,7 +39,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next, 1)" 
+      on_click="set(dialogue_next, 1); playsound=("fear.mp3")" 
     />
   </fab-if>
 
