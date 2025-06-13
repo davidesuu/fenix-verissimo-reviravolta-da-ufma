@@ -17,39 +17,21 @@
   y="45"
   on_click="setIf(1=1, objection, 0); set(dialogue_next, $dialogue_next + 1)" 
 />
-
-    />  
   
-  <fab-if when="$dialogue_next = 0">
+
+  
+<fab-if when="$dialogue_next = 0">
     <agent 
     id="dialogue_1"
-    text = '"So...are you not coming with us?"'
+    text = "July 13th 2025"
+    color="green"
     x = '36'
     y = '390'
     font-size=""
     animation="typewriter"
     />
-    <fab-if when="$objection=1">
-      <agent
-      id="obj"
-      text="why would you do this?"
-      x="36"
-      y="390"
-      animation="typewriter"
-      />
 </fab-if>
-    </fab-if>
 
-  <fab-if when="$dialogue_next=1">
-    <agent
-    id="dialogue_2"
-    text='"Not felling too good right now...sorry"'
-    animation="typewriter"
-    x = '36'
-    y = '390'
-    />
-    </fab-if>
-  
   
     
 </page>
