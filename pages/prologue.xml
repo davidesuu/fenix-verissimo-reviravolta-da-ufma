@@ -1,11 +1,15 @@
 <page id="prologue" bg_image="prologue_1.jpg">
+  
+  <fab-if when="show_objection_img=true">
   <agent
-    id="obj_img"
+    id="obj_imgg"
     image="cemetery-skeleton.png"
     x="center"
     y="center"
     animation="bounce-in"
+    
     />
+  </fab-if>
 
   <!-- OBJECTION: sempre aparece -->
   <agent
@@ -13,7 +17,7 @@
     text="OBJECTION!"
     x="34"
     y="100"
-    on_click="setIf(1=1, objection, 1); set(objection_timing, $dialogue_next); set(objection_stage, 0)"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0)"
   />
 
   <!-- ======================== -->
@@ -70,7 +74,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(objection_stage, 1)" 
+      on_click="set(objection_stage, 1);set(show_objection_img, false)" 
     />
   </fab-if>
 
@@ -124,7 +128,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(objection_stage, 1)" 
+      on_click="set(objection_stage, 1);set(show_objection_img, false)" 
     />
   </fab-if>
 
@@ -178,7 +182,7 @@
     text=">>"
     x="80"
     y="45"
-    on_click="set(objection_stage, 1)" 
+    on_click="set(objection_stage, 1);set(show_objection_img, false)" 
   />
 </fab-if>
 
