@@ -39,7 +39,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next, 1); playsound=("fear.mp3")" 
+      on_click="set(dialogue_next, 1);"
     />
   </fab-if>
 
