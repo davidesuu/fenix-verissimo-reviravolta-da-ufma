@@ -6,6 +6,7 @@
   <property name="dialogue_next_2" default="0" />
   <property name="objection" default="0" />
   <property name="obejection_timing" default="0" />
+  <property name="show_objection_img" default="false" />
 
   <start />
   <prologue />
