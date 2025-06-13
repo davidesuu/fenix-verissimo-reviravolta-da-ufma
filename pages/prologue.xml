@@ -1,12 +1,12 @@
 <page id="prologue" bg_image="prologue_1.jpg">
 
-<!-- Botão OBJECTION -->   
+ <!-- Botão OBJECTION, disponível o tempo todo, mas a resposta dele depende do momento -->
   <agent
-  id="obejction"
-  text="OBJECTION"
-  x="34"
-  y="100"
-  on_click="set(objection, $objection+1)"
+    id="objection"
+    text="OBJECTION!"
+    x="34"
+    y="100"
+    on_click="setIf(1=1, objection, 1); set(objection_timing, $dialogue_next)"
   />
 
 <!-- Botão para avançar a fala -->  
@@ -40,6 +40,19 @@
       y="390"
       animation="typewriter"
       />
+ </fab-if>
+
+  
+ <!-- Fala 0: Se o advogado usa OBJECTION no momento certo (mesmo diálogo) -->
+  <fab-if when="$dialogue_next = 0 and $objection = 1">
+    <agent
+      id="advogado1"
+      text='"Nem tão óbvio assim! Essa mesma lógica pode apontar para alguém tentando incriminá-la."'
+      x="36"
+      y="390"
+      animation="typewriter"
+    />
+  </fab-if>
 
   
     
