@@ -32,6 +32,15 @@
     />
 </fab-if>
 
+ <fab-if when="$dialogue_next = 1 and $objection != 1">
+    <agent
+      id="testemunha1"
+      text='"Esse caso é extremamente simples. Não havia nenhum professor no campus naquele momento e a única nota alterada foi a da acusada. Parece óbvio, não?"'
+      x="36"
+      y="390"
+      animation="typewriter"
+      />
+
   
     
 </page>
