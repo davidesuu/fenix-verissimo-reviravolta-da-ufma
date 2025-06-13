@@ -7,6 +7,7 @@
   <property name="objection" default="0" />
   <property name="obejection_timing" default="0" />
   <property name="show_objection_img" default="false" />
+  <property name="music_on" default="false"/>
 
   <start />
   <prologue />
