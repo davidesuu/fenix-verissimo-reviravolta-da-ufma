@@ -1,4 +1,11 @@
 <page id="prologue" bg_image="prologue_1.jpg">
+  <agent
+    id="obj_img"
+    image="cemetery-skeleton.png"
+    x="center"
+    y="center"
+    animation="bounce-in"
+    />
 
   <!-- OBJECTION: sempre aparece -->
   <agent
