@@ -150,11 +150,11 @@
     animation="typewriter"
   />
   <agent 
-    id="next_3"
+    id="next_last"
     text=">>"
     x="80"
     y="45"
-    on_click="set(dialogue_next, 4)" 
+    on_click="set(dialogue_next, 0); set(objection_stage, 0); set(objection_timing, -1)" 
   />
 </fab-if>
 
@@ -184,11 +184,15 @@
     animation="typewriter"
   />
   <agent 
-    id="next_resposta3"
-    text=">>"
-    x="80"
-    y="45"
-    on_click="set(dialogue_next, 4); set(objection_stage, 0); set(objection_timing, -1)" 
+  
+  <agent 
+  id="next_page"
+  text=">>"
+  x="80"
+  y="45"
+  on_click="goToPage('prologue_part2')" 
+  />
+
   />
 </fab-if>
 
