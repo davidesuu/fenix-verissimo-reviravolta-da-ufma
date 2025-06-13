@@ -6,6 +6,7 @@
   <property name="dialogue_next_2" default="0" />
   <property name="pontuacao" default="0" />
   <property name="visitante" default="Aventureiro" />
+  <property name="objection" default="aventureiro" />
 
   <start />
   <prologue />
