@@ -1,29 +1,20 @@
 <page id="prologue_part2" bg_image="prologue_1.jpg">
-  <agent 
-    id="dialogue_click"
-    text="O"
-    x="500"
-    y="0"
-    on_click="set(dialogue_next_1, $dialogue_next_1 + 1)"
-  />
-  <fab-if when="$dialogue_next_1 = 0">
-    <agent
-      id="dialogo_1"
-      text="oiii, oiiiiii"
-      x="36"
-      y="390"
-      animation="typewriter"
-      />
+ <fab-if when="$dialogue_next = 1">
+    <agent 
+      id="fala_continua"
+      text="Parte 2 - O dialogue_next ainda está em 1"
+      x="36" 
+      y="390" 
+    />
   </fab-if>
 
-  <fab-if when="$dialogue_next_1 = 1">
-    <agent
-      id="dialogo_2"
-      text="olaaa, ollaaaaa"
-      x="36"
-      y="390"
-      animation="typewriter"
-      />
+  <fab-if when="$dialogue_next != 1">
+    <agent 
+      id="fala_reseta"
+      text="Parte 2 - O dialogue_next NÃO está em 1 (ou seja, ele resetou)"
+      x="36" 
+      y="390" 
+    />
   </fab-if>
-  
+
 </page>
