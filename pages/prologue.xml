@@ -1,62 +1,125 @@
 <page id="prologue" bg_image="prologue_1.jpg">
 
- <!-- Botão OBJECTION, disponível o tempo todo, mas a resposta dele depende do momento -->
+  <!-- Botão OBJECTION, funciona sempre -->
   <agent
     id="objection"
     text="OBJECTION!"
     x="34"
     y="100"
-    on_click="setIf(1=1, objection, 1); set(objection_timing, $dialogue_next)"
+    on_click="setIf(1=1, objection, 1); setIf(1=1, objection_timing, $dialogue_next); set(objection_stage, 0)"
   />
 
-<!-- Botão para avançar a fala -->  
-<agent 
-  id="next"
-  text=">>"
-  x="80"
-  y="45"
-  on_click="setIf(1=1, objection, 0); set(dialogue_next, $dialogue_next + 1)" 
-/>
-  
+  <!-- Botão para avançar a fala normalmente -->
+  <agent 
+    id="next"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="setIf(1=1, objection, 0); set(dialogue_next, $dialogue_next + 1); set(objection_timing, -1)" 
+  />
 
-  
-<fab-if when="$dialogue_next = 0">
+  <!-- Fala inicial -->
+  <fab-if when="$dialogue_next = 0">
     <agent 
-    id="dialogue_1"
-    text = "July 13th 2025"
-    color="green"
-    x = '36'
-    y = '390'
-    font-size=""
-    animation="typewriter"
+      id="intro"
+      text="July 13th 2025"
+      color="green"
+      x="36"
+      y="390"
+      animation="typewriter"
     />
-</fab-if>
+  </fab-if>
 
-<!-- Fala normal -->
-<fab-if when="$dialogue_next = 0 and $objection_timing != 0">
-  <agent id="test1" text='"Esse caso é bem simples. Não vejo a necessidade de ir ao tribunal."' x="36" y="390" animation="typewriter" />
-</fab-if>
-
-<!-- OBJECTION feita na fala 0 -->
-<fab-if when="$objection_timing=0">
-  <agent 
-    id="obj1" 
-    text='"Simples demais. Às vezes, o diabo está nos detalhes."' 
-    x="36" 
-    y="390" 
-    animation="typewriter" 
+  <!-- Fala 1 normal -->
+  <fab-if when="$dialogue_next = 1 and $objection_timing != 1">
+    <agent 
+      id="test1" 
+      text='"Esse caso é bem simples. Não vejo a necessidade de ir ao tribunal."' 
+      x="36" 
+      y="390" 
+      animation="typewriter" 
     />
-  
-  <agent 
-    id="test2" 
-    text='"É só uma maneira de dizer. Os fatos falam por si."' 
-    x="36" 
-    y="420" 
-    animation="typewriter"
+  </fab-if>
+
+  <!-- OBJECTION da fala 1 -->
+  <fab-if when="$objection_timing = 1 and $objection_stage = 0">
+    <agent 
+      id="obj1" 
+      text='"Simples demais. Às vezes, o diabo está nos detalhes."' 
+      x="36" 
+      y="390" 
+      animation="typewriter" 
     />
-</fab-if>
+    <agent 
+      id="next_obj1" 
+      text=">>" 
+      x="80" 
+      y="60" 
+      on_click="set(objection_stage, 1)" 
+    />
+  </fab-if>
 
+  <fab-if when="$objection_timing = 1 and $objection_stage = 1">
+    <agent 
+      id="test_response1" 
+      text='"É só uma maneira de dizer. Os fatos falam por si."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_resume1" 
+      text=">>" 
+      x="100" 
+      y="45" 
+      on_click="set(objection_stage, 0); set(objection_timing, -1); set(dialogue_next, $dialogue_next + 1)" 
+    />
+  </fab-if>
 
-  
-    
+  <!-- Fala 2 normal -->
+  <fab-if when="$dialogue_next = 2 and $objection_timing != 2">
+    <agent 
+      id="test2" 
+      text='"Naquela hora não havia nenhum professor no prédio, logo isso facilitou o caso."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+  </fab-if>
+
+  <!-- OBJECTION da fala 2 -->
+  <fab-if when="$objection_timing = 2 and $objection_stage = 0">
+    <agent 
+      id="obj2" 
+      text='"Facilitou pra quem? Você sabia que ela estaria lá?"' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_obj2" 
+      text=">>" 
+      x="100" 
+      y="45" 
+      on_click="set(objection_stage, 1)" 
+    />
+  </fab-if>
+
+  <fab-if when="$objection_timing = 2 and $objection_stage = 1">
+    <agent 
+      id="test_response2" 
+      text='"Eu só quis dizer que não havia ninguém pra impedir que ela fizesse isso."' 
+      x="36" 
+      y="390" 
+      animation="typewriter"
+    />
+    <agent 
+      id="next_resume2" 
+      text=">>" 
+      x="80" 
+      y="45" 
+      on_click="set(objection_stage, 0); set(objection_timing, -1); set(dialogue_next, $dialogue_next + 1)" 
+    />
+  </fab-if>
+
 </page>
