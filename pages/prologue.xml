@@ -1,5 +1,6 @@
 <page id="prologue" bg_image="prologue_1.jpg">
-    
+
+<!-- Botão OBJECTION -->   
   <agent
   id="obejction"
   text="OBJECTION"
@@ -7,15 +8,16 @@
   y="100"
   on_click="set(objection, $objection+1)"
   />
-  
-  <agent 
+
+<!-- Botão para avançar a fala -->  
+<agent 
   id="next"
-  text="o"
-  font-size="1000"
-  y = '45'
-  x = '80'
-  color="black"
-  on_click="set(dialogue_next, $dialogue_next+1)";
+  text=">>"
+  x="80"
+  y="45"
+  on_click="setIf(1=1, objection, 0); set(dialogue_next, $dialogue_next + 1)" 
+/>
+
     />  
   
   <fab-if when="$dialogue_next = 0">
