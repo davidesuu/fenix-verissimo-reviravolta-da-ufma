@@ -13,6 +13,7 @@
   <property name="phoenix_on" default="false" />
   <property name="witness_on" default="false" />
   <property name="aciusa_on" default="false" />
+  <property name="objection_timing" default="0" />  
   
   <start />
   <prologue />
