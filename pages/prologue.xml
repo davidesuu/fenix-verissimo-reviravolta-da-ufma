@@ -27,10 +27,10 @@
   <fab-if when="$dialogue_next = 0">
     <agent 
       id="intro"
-      text="July 13th 2025"
+      text="9 de Junho, 10:30, Sala de Audiência No.1."
       color="green"
-      x="36"
-      y="390"
+      x="center"
+      y="450"
       animation="typewriter"
       
     />
