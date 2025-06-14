@@ -34,14 +34,8 @@
       id="witness_img"
       image="witness_1.png" 
       />
-    <agent
-      id="witness_name"
-      text="Iris"
-      y="400"
-      x="36"
-      color="white"
-    
-      />
+      
+
     </fab-if>
 
    <fab-if when="acusa_on=true">
@@ -205,7 +199,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 5 and $objection_timing != 5">
     <agent 
       id="fala1" 
-      text='Vou te falar hein, não sei porque vocês vão se dar o trabalho ir ao tribunal. Além disso, tenho um date daqui a pouco, seja breve.' 
+      text='Iris - "Vou te falar hein, não sei porque vocês vão se dar o trabalho ir ao tribunal. Além disso, tenho um date daqui a pouco, seja breve."' 
       x="36" 
       y="450" 
       animation="typewriter"
@@ -243,7 +237,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 5 and $objection_timing = 5 and $objection_stage = 1">
     <agent 
       id="resposta1" 
-      text='Poderia não interromper a testemunha na primeira fala, senhor Veríssimo?' 
+      text='Juiz - "Poderia não interromper a testemunha na primeira fala, senhor Veríssimo?"'
       x="36" 
       y="450"
       color="white"
@@ -265,7 +259,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 6 and $objection_timing != 6">
     <agent 
       id="fala2" 
-      text='"Naquela hora não havia nenhum professor no prédio, logo isso facilitou o caso."' 
+      text='Iris - "Naquela hora não havia nenhum professor no prédio, logo isso facilitou o caso."' 
       x="36" 
       y="450" 
       color="white"
@@ -303,7 +297,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 6 and $objection_timing = 6 and $objection_stage = 1">
     <agent 
       id="resposta2" 
-      text='Bom, todo mundo sabia que os professores estariam em uma reunião naquele momento. Foi divulgado publicamente.' 
+      text='Iris - "Bom, todo mundo sabia que os professores estariam em uma reunião naquele momento. Foi divulgado publicamente."' 
       x="36" 
       y="450"
       color="white"
@@ -325,7 +319,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
 <fab-if when="$dialogue_next = 7 and $objection_timing != 7">
   <agent 
     id="fala3" 
-    text='Além disso, a única nota que foi alterada foi dela, aqui acabou. "Its over" aqui.' 
+    text='Iris - "Além disso, a única nota que foi alterada foi dela, aqui acabou. "Its over" aqui."' 
     x="36" 
     y="450" 
     color="white"
@@ -364,7 +358,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
 <fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 1">
   <agent 
     id="resposta3" 
-    text='Excelente ponto, senhor Veríssimo. Talvez esse caso não seja tão óbvio quanto parecia.' 
+    text='Juis- "Excelente ponto, senhor Veríssimo. Talvez esse caso não seja tão óbvio quanto parecia."' 
     x="36" 
     y="450"
     color="white"
@@ -383,7 +377,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and $objection_stage = 1">
   <agent 
     id="resposta4" 
-    text='Que bobagem, isso aqui não é aquele jogo de advogado point and click.' 
+    text='Flavio - "Que bobagem, isso aqui não é aquele jogo de advogado point and click."' 
     x="36" 
     y="450"
     color="white"
@@ -402,7 +396,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
 <fab-if when="$dialogue_next = 9 and $objection_timing = 9 and $objection_stage = 1">
   <agent 
     id="resposta5" 
-    text="Testemunha, deponha de novo com mais detalhes a partir de agora." 
+    text='Juiz - "Testemunha, deponha de novo com mais detalhes a partir de agora."' 
     x="36" 
     y="450"
     color="white"
@@ -421,7 +415,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 10 and $objection_timing = 10 and objection_stage = 1">
     <agent
     id="resposta6"
-    text="Tudo bem, vossa Excelência"
+    text='Iris - "Tudo bem, vossa Excelência"'
     x="36"
     y="450"
     color="white"
