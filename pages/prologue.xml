@@ -312,7 +312,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     id="fala3" 
     text='Além disso, a única nota que foi alterada foi dela, aqui acabou. "Its over" aqui.' 
     x="36" 
-    y="390" 
+    y="450" 
     color="white"
     animation="typewriter"
   />
@@ -395,25 +395,6 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   y="45"
   on_click="set(objection_stage, 1);set(dialogue_next, 10);set(objection_timing, 10); playSound('typing.mp3')"
   />
-
-<fab-if when="$dialogue_next = 10 and $objection_timing = 10 and $objection_stage = 1">
-  <agent 
-    id="resposta6" 
-    text="Testemunha, deponha de novo com mais detalhes a partir de agora." 
-    x="36" 
-    y="450"
-    color="white"
-    animation="typewriter"
-  />
-  <agent  
-  id="nextpage"
-  text=">>"
-  x="80"
-  y="45"
-  on_click="goToPage('prologue_part2')"
-/>
-</fab-if>  
+</fab-if>
   
-
-
 </page>
