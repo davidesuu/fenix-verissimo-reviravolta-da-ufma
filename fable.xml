@@ -12,6 +12,8 @@
   <property name="judge_on" default="false" />
   <property name="phoenix_on" default="false" />
   <property name="witness_on" default="false" />
+  <property name="aciusa_on" default="false" />
+  
   <start />
   <prologue />
   <prologue_part2 />
