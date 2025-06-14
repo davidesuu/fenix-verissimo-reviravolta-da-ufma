@@ -84,6 +84,7 @@
  
    
   <!-- OBJECTION: sempre aparece -->
+ <fab-if when="pressionar_img = true">
   <agent
     id="objection"
     x=""
@@ -92,7 +93,7 @@
     font-size="200"
     on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3');set(witness_on, false);set(phoenix_on,true)"
   />
-
+ </fab-if>
   <!-- ======================== -->
   <!-- Introdução -->
   <!-- ======================== -->
@@ -129,8 +130,9 @@
     <agent 
       id="intro_next1"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
 on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(dialogue_next, 2)"
     />
   </fab-if>
@@ -148,8 +150,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="intro_next2"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
     on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on,false);set(phoenix_on,true);set(dialogue_next, 3)"
     />
   </fab-if> 
@@ -167,8 +170,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="intro_next3"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="playSound('typing.mp3');set(judge_on,true);set(acusa_on, false);set(phoenix_on, false);set(dialogue_next, 4)"
     />
   </fab-if>    
@@ -187,9 +191,10 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="intro_next4"
       text=">>"
-      x="80"
-      y="45"
-      on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on,false);set(phoenix_on, false);set(witness_on,true);set(dialogue_next, 5)"
+      x="10"
+      y="450"
+      font-size="700"
+      on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on,false);set(phoenix_on, false);set(witness_on,true);set(dialogue_next, 5);set(pressionar_img, true)"
     />
   </fab-if>       
   
@@ -209,8 +214,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="next_1"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(dialogue_next, 6);playSound('typing.mp3')" 
     />
   </fab-if>
@@ -225,10 +231,11 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
       animation="typewriter"
     />
     <agent 
-      id="next_obj1" 
+      id="next_obj1"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
     />
   </fab-if>
@@ -245,8 +252,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="next_resposta1"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(dialogue_next, 6); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3');" 
     />
   </fab-if>
@@ -266,8 +274,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="next_2"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(dialogue_next, 7);playSound('typing.mp3')" 
     />
   </fab-if>
@@ -284,8 +293,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="next_obj2"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
     />
   </fab-if>
@@ -302,8 +312,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     <agent 
       id="next_resposta2"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(dialogue_next, 7); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
     />
   </fab-if>
@@ -323,8 +334,9 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <agent 
     id="next_last"
     text=">>"
-    x="80"
-    y="45"
+    x="10"
+    y="450"
+    font-size="700"
     on_click="set(dialogue_next, 5); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
   />
 </fab-if>
@@ -340,10 +352,11 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     animation="typewriter"
   />
   <agent 
-    id="next_obj3"
-    text=">>"
-    x="80"
-    y="45"
+      id="next_obj3"
+      text=">>"
+      x="10"
+      y="450"
+      font-size="700"
     on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
   />
 </fab-if>
@@ -357,11 +370,12 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     color="white"
     animation="typewriter"
   />
-  <agent  
-  id="prox3"
-  text=">>"
-  x="80"
-  y="45"
+  <agent   
+      id="prox3"
+      text=">>"
+      x="10"
+      y="450"
+      font-size="700"
   on_click="set(objection_stage, 1);set(dialogue_next, 8);set(objection_timing, 8); playSound('typing.mp3')"
   />
 </fab-if>
@@ -376,10 +390,11 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     animation="typewriter"
   />
   <agent  
-  id="prox4"
-  text=">>"
-  x="80"
-  y="45"
+      id="prox4"
+      text=">>"
+      x="10"
+      y="450"
+      font-size="700"
   on_click="set(objection_stage, 1);set(dialogue_next, 9);set(objection_timing, 9); playSound('typing.mp3')" 
   />
 </fab-if>
@@ -394,10 +409,11 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     animation="typewriter"
   />
   <agent  
-  id="prox5"
-  text=">>"
-  x="80"
-  y="45"
+      id="prox5"
+      text=">>"
+      x="10"
+      y="450"
+      font-size="700"
   on_click="set(objection_stage, 1);set(dialogue_next, 10);set(objection_timing, 10); playSound('typing.mp3')"
   />
 </fab-if>
@@ -412,10 +428,11 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     animation="typewriter"
     />
       <agent  
-  id="next_page"
-  text=">>"
-  x="80"
-  y="45"
+      id="next_page"
+      text=">>"
+      x="10"
+      y="450"
+      font-size="700"  
   on_click="goToPage('prologue_part2')"
   />
   </fab-if>
