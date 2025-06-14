@@ -12,6 +12,13 @@
       id="witness_img"
       image="witness_1.png" 
       />
+    <agent
+      id="witness_name"
+      text="placeholder"
+      y="380"
+      x="36"
+      color="white"
+      />
     </fab-if>  
   
   <fab-if when="text_box=true">
@@ -66,7 +73,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next, 1);playSound('typing.mp3')"
+      on_click="set(dialogue_next, 1);playSound('typing.mp3');set(witness_on,true)"
     />
  </fab-if>
 
@@ -79,8 +86,9 @@
       id="fala1" 
       text='"Esse caso é bem simples. Não vejo a necessidade de ir ao tribunal."' 
       x="36" 
-      y="390" 
+      y="450" 
       animation="typewriter"
+      color="white"
     />
     <agent 
       id="next_1"
