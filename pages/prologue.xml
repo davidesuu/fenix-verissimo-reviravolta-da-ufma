@@ -19,7 +19,7 @@
 
   <!-- Quando for Objection, mostra só o Phoenix com a imagem de protesto -->
   <fab-if when="show_objection_img=true">
-    <agent id="phoenix_img" image="phoenix_1.png" />
+    <agent id="phoenixx_img" image="phoenix_1.png" />
     <agent id="obj_imgg" image="protesto_2.png" x="50" y="50" animation="bounce-in" />
   </fab-if>
 
@@ -64,339 +64,288 @@
     />
   </fab-if>
 
-  <!-- Juiz aparece antes da fala dele -->
-  <fab-if when="$dialogue_next = 1">
-    <agent 
-      id="fala_juiz_1" 
-      text='"Declaro aberta a sessão para o julgamento da Clara por falsificação da nota."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_juiz_1"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="
-        set(dialogue_next, 2); 
-        set(judge_on, false); 
-        set(acusa_on, true);
-        set(phoenix_on, false);
-        set(witness_on, false);
-        playSound('typing.mp3')" 
-    />
-  </fab-if>
+ <!-- ======================== -->
+<!-- Depois da introdução -->
+<!-- ======================== -->
 
-  <!-- Acusação -->
-  <fab-if when="$dialogue_next = 2">
-    <agent 
-      id="fala_acusacao_1" 
-      text='"A acusação está pronta, Meritíssimo."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_acusacao_1"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="
-        set(dialogue_next, 3); 
-        set(acusa_on, false); 
-        set(judge_on, false);
-        set(phoenix_on, true);
-        set(witness_on, false);
-        playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Defesa -->
-  <fab-if when="$dialogue_next = 3">
-    <agent 
-      id="fala_phoenix_1" 
-      text='"A defesa também está pronta... eu acho."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_phoenix_1"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="
-        set(dialogue_next, 4); 
-        set(phoenix_on, false); 
-        set(judge_on, true);
-        set(acusa_on, false);
-        set(witness_on, false);
-        playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Juiz chamando testemunha -->
-  <fab-if when="$dialogue_next = 4">
-    <agent 
-      id="fala_juiz_2" 
-      text='"Chamem a testemunha então para começar a inquirição."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_juiz_2"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="
-        set(dialogue_next, 5); 
-        set(witness_on, true); 
-        set(judge_on, false); 
-        set(acusa_on, false);
-        set(phoenix_on, false);
-        playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- ======================== -->
-  <!-- Looping da Interrogação -->
-  <!-- ======================== -->
-
-  <!-- Primeira fala da testemunha -->
-  <fab-if when="$dialogue_next = 5 and $objection_timing != 5">
-    <agent 
-      id="fala_witness_1" 
-      text='"Vou te falar hein, não sei porque vocês vão se dar o trabalho de ir ao tribunal. Além disso, tenho um date daqui a pouco, seja breve."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_witness_1"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 6); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Objection 1 -->
-  <fab-if when="$dialogue_next = 5 and $objection_timing = 5 and $objection_stage = 0">
-    <agent 
-      id="obj_witness_1" 
-      text='"Com quem seria esse "date"?"' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_obj_witness_1"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(objection_stage, 1); set(show_objection_img, false); playSound('typing.mp3');" 
-    />
-  </fab-if>
-
-  <fab-if when="$dialogue_next = 5 and $objection_timing = 5 and $objection_stage = 1">
-    <agent 
-      id="fala_juiz_3" 
-      text='"Poderia não interromper a testemunha na primeira fala, senhor Veríssimo?"' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_juiz_3"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 6); set(objection_stage, 0); set(objection_timing, -1); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Segunda fala da testemunha -->
-  <fab-if when="$dialogue_next = 6 and $objection_timing != 6">
-    <agent 
-      id="fala_witness_2" 
-      text='"Esse caso é bem simples, não tinha nenhum professor no prédio no horário, já excluindo várias possibilidades."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_witness_2"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 7); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Objection 2 -->
-  <fab-if when="$dialogue_next = 6 and $objection_timing = 6 and $objection_stage = 0">
-    <agent 
-      id="obj_witness_2" 
-      text='"Como você sabia que não tinha nenhum professor no local?"' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_obj_witness_2"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(objection_stage, 1); set(show_objection_img, false); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <fab-if when="$dialogue_next = 6 and $objection_timing = 6 and $objection_stage = 1">
-    <agent 
-      id="resposta_witness_2" 
-      text='"Bom, todo mundo sabia que os professores estariam em uma reunião naquele momento. Foi divulgado publicamente."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_resposta_witness_2"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 7); set(objection_stage, 0); set(objection_timing, -1); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Terceira fala da testemunha -->
-  <fab-if when="$dialogue_next = 7 and $objection_timing != 7">
-    <agent 
-      id="fala_witness_3" 
-      text="Além disso, a única nota que foi alterada foi dela, aqui acabou. It's over pra ela." 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_witness_3"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 8); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Objection 3 -->
-  <fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 0">
-    <agent 
-      id="obj_witness_3" 
-      text='"Isso não significa nada, amiga! E se alguém alterou a nota dela apenas pra incriminar? É preciso analisar todas as possibilidades."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_obj_witness_3"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(objection_stage, 1); set(show_objection_img, false); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 1">
+<fab-if when="$dialogue_next = 1">
   <agent 
-    id="fala_juiz_4" 
-    text='"Excelente ponto, senhor Veríssimo. Talvez esse caso não seja tão óbvio quanto parecia."' 
+    id="fala_juiz_1" 
+    text='"Declaro aberta a sessão para o julgamento da Clara por falsificação da nota."' 
     x="36" 
     y="450" 
     animation="typewriter"
     color="white"
   />
   <agent 
+    id="next_juiz_1"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 2); set(acusa_on, true); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 2">
+  <agent 
+    id="fala_acusacao_1" 
+    text='"A acusação está pronta, Meritíssimo."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_acusacao_1"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 3);set(acusa_on, false);set(phoenix_on, true); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 3">
+  <agent 
+    id="fala_phoenix_1" 
+    text='"A defesa também está pronta... eu acho."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_phoenix_1"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 4); set(phoenix_on, true); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 4">
+  <agent 
+    id="fala_juiz_2" 
+    text='"Chamem a testemunha então para começar a inquirição."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_juiz_2"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 5); set(witness_on, true); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<!-- ======================== -->
+<!-- Início do looping de interrogação -->
+<!-- ======================== -->
+
+<!-- Primeira fala da testemunha -->
+<fab-if when="$dialogue_next = 5 and $objection_timing != 5">
+  <agent 
+    id="fala_witness_1" 
+    text='"Vou te falar hein, não sei porque vocês vão se dar o trabalho de ir ao tribunal. Além disso, tenho um date daqui a pouco, seja breve."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_witness_1"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 6);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 5 and $objection_timing = 5 and $objection_stage = 0">
+  <agent 
+    id="obj_witness_1" 
+    text='"Com quem seria esse "date"?"' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj_witness_1"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(objection_stage, 1); set(show_objection_img, false); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 5 and $objection_timing = 5 and $objection_stage = 1">
+  <agent 
+    id="fala_juiz_3" 
+    text='"Poderia não interromper a testemunha na primeira fala, senhor Veríssimo?"' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_juiz_3"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 6); set(objection_stage, 0); set(objection_timing, -1); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<!-- Segunda fala da testemunha -->
+<fab-if when="$dialogue_next = 6 and $objection_timing != 6">
+  <agent 
+    id="fala_witness_2" 
+    text='"Esse caso é bem simples, não tinha nenhum professor no prédio no horário, já excluindo várias possibilidades."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_witness_2"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 7); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 6 and $objection_timing = 6 and $objection_stage = 0">
+  <agent 
+    id="obj_witness_2" 
+    text='"Como você sabia que não tinha nenhum professor no local?"' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj_witness_2"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(objection_stage, 1); set(show_objection_img, false); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 6 and $objection_timing = 6 and $objection_stage = 1">
+  <agent 
+    id="resposta_witness_2" 
+    text='"Bom, todo mundo sabia que os professores estariam em uma reunião naquele momento. Foi divulgado publicamente."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta_witness_2"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 7); set(objection_stage, 0); set(objection_timing, -1); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<!-- Terceira fala da testemunha -->
+<fab-if when="$dialogue_next = 7 and $objection_timing != 7">
+  <agent 
+    id="fala_witness_3" 
+    text="Além disso, a única nota que foi alterada foi dela, aqui acabou. It\'s over pra ela." 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_witness_3"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 8); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 0">
+  <agent 
+    id="obj_witness_3" 
+    text='"Isso não significa nada, amiga! E se alguém alterou a nota dela apenas pra incriminar? É preciso analisar todas as possibilidades."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj_witness_3"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(objection_stage, 1); set(show_objection_img, false); playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 1">
+  <agent 
+    id="fala_juiz_4" 
+    text='"Excelente ponto, senhor Veríssimo. Talvez esse caso não seja tão óbvio quanto parecia."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
     id="next_juiz_4"
     text=">>"
     x="80"
     y="45"
-    on_click="
-      set(dialogue_next, 8); 
-      set(objection_stage, 0); 
-      set(objection_timing, -1); 
-      set(show_objection_img, false); 
-      playSound('typing.mp3')" 
+    on_click="set(dialogue_next, 8); playSound('typing.mp3')" 
   />
 </fab-if>
 
+<fab-if when="$dialogue_next = 8">
+  <agent 
+    id="fala_acusacao_2" 
+    text='"Que bobagem, isso aqui não é aquele jogo de advogado point and click."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_acusacao_2"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 9); playSound('typing.mp3')" 
+  />
+</fab-if>
 
-  <!-- Acusação debocha -->
-  <fab-if when="$dialogue_next = 8">
-    <agent 
-      id="fala_acusacao_2" 
-      text='"Que bobagem, isso aqui não é aquele jogo de advogado point and click."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_acusacao_2"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 9); playSound('typing.mp3')" 
-    />
-  </fab-if>
+<fab-if when="$dialogue_next = 9">
+  <agent 
+    id="fala_juiz_5" 
+    text='"Testemunha, deponha de novo com mais detalhes a partir de agora."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent 
+    id="next_juiz_5"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="set(dialogue_next, 10); playSound('typing.mp3')" 
+  />
+</fab-if>
 
-  <!-- Juiz pede mais detalhes -->
-  <fab-if when="$dialogue_next = 9">
-    <agent 
-      id="fala_juiz_5" 
-      text='"Testemunha, deponha de novo com mais detalhes a partir de agora."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_juiz_5"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 10); playSound('typing.mp3')" 
-    />
-  </fab-if>
-
-  <!-- Testemunha aceita -->
-  <fab-if when="$dialogue_next = 10">
-    <agent 
-      id="fala_witness_4" 
-      text='"Tudo bem, Vossa Excelência."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent  
-      id="next_page_prologue2"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="goToPage('prologue_part2')" 
-    />
-  </fab-if>
+<fab-if when="$dialogue_next = 10">
+  <agent 
+    id="fala_witness_4" 
+    text='"Tudo bem, Vossa Excelência."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+  />
+  <agent  
+    id="next_page_prologue2"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="goToPage('prologue_part2')" 
+  />
+</fab-if>
 
 </page>
