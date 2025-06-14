@@ -1,13 +1,22 @@
 <page id="prologue" bg_image="prologue_1.jpg" bg_music="02. Defendant Lobby - So it Begins.mp3">
   
 
+  <fab-if when="text_box=true">
+    <agent 
+      id="new_agent"
+      image="text_box.png"
+      y="386"
+      x="1"
+      />
+  </fab-if>
+  
    <!-- OBJECTION: IMAGEM --> 
   <fab-if when="show_objection_img=true">
   <agent
     id="obj_imgg"
-    image=""
-    x="center"
-    y="center"
+    image="protesto_2.png"
+    x="50"
+    y="50"
     animation="bounce-in"
     />
   </fab-if>
@@ -37,7 +46,7 @@
     />
     <agent
       id="juiz_back"
-      image="juiz_lugar.png"
+      image=""
       />
     <agent 
       id="next_0"
