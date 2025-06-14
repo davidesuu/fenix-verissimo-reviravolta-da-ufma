@@ -41,8 +41,9 @@
       y="45"
       on_click="set(dialogue_next, 1);playSound('typing.mp3')"
     />
-  </fab-if>
+ </fab-if>
 
+ 
   <!-- ======================== -->
   <!-- Fala 1 -->
   <!-- ======================== -->
