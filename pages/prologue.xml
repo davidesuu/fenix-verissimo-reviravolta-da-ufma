@@ -113,7 +113,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next, 1);playSound('typing.mp3');set(witness_on,true)"
+      on_click="set(dialogue_next, 1);playSound('typing.mp3');set(judge_on,true)"
     />
  </fab-if>
 
