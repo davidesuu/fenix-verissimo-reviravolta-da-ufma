@@ -24,7 +24,7 @@
   <fab-if when="text_box=true">
     <agent 
       id="new_agent"
-      image="text_box.png"
+      image="text_box_2.png"
       y="386"
       x="1"
       />
