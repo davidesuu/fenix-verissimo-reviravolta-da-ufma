@@ -8,7 +8,7 @@
       />
     <agent
       id="phoenix_name"
-      text="placeholder"
+      text="Verissimo"
       y="400"
       x="36"
       color="white"
@@ -22,7 +22,7 @@
       />
     <agent
       id="judge_name"
-      text="placeholder"
+      text="Juiz"
       y="400"
       x="36"
       color="white"
@@ -36,7 +36,7 @@
       />
     <agent
       id="witness_name"
-      text="placeholder"
+      text="Iris"
       y="400"
       x="36"
       color="white"
@@ -50,7 +50,7 @@
       image="acusa_1.png" 
       />
     <agent
-      id="acusa_name"
+      id=""
       text="placeholder"
       y="400"
       x="36"
