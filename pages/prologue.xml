@@ -1,5 +1,6 @@
 <page id="prologue" bg_image="prologue_1.jpg" bg_music="02. Defendant Lobby - So it Begins.mp3">
 
+<!-- IMAGEM DOS PERSONAGENS -->
   <fab-if when="phoenix_on=true">
     <agent
       id="phoenix_img"
