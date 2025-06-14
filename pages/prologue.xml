@@ -1,6 +1,19 @@
 <page id="prologue" bg_image="prologue_1.jpg" bg_music="02. Defendant Lobby - So it Begins.mp3">
-  
 
+  <fab-if when="judge_on=true">
+    <agent
+      id="judge_img"
+      image="judge_1.png" 
+      />
+    </fab-if>
+
+    <fab-if when="witness_on">
+    <agent
+      id="witness_img"
+      image="witness_1.png" 
+      />
+    </fab-if>  
+  
   <fab-if when="text_box=true">
     <agent 
       id="new_agent"
