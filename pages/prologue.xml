@@ -319,22 +319,28 @@
   </fab-if>
 
   <fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 1">
-    <agent 
-      id="fala_juiz_4" 
-      text='"Excelente ponto, senhor Veríssimo. Talvez esse caso não seja tão óbvio quanto parecia."' 
-      x="36" 
-      y="450" 
-      animation="typewriter"
-      color="white"
-    />
-    <agent 
-      id="next_juiz_4"
-      text=">>"
-      x="80"
-      y="45"
-      on_click="set(dialogue_next, 8); playSound('typing.mp3')" 
-    />
-  </fab-if>
+  <agent 
+    id="fala_juiz_4" 
+    text='"Excelente ponto, senhor Veríssimo. Talvez esse caso não seja tão óbvio quanto parecia."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+    color="white"
+  />
+  <agent 
+    id="next_juiz_4"
+    text=">>"
+    x="80"
+    y="45"
+    on_click="
+      set(dialogue_next, 8); 
+      set(objection_stage, 0); 
+      set(objection_timing, -1); 
+      set(show_objection_img, false); 
+      playSound('typing.mp3')" 
+  />
+</fab-if>
+
 
   <!-- Acusação debocha -->
   <fab-if when="$dialogue_next = 8">
