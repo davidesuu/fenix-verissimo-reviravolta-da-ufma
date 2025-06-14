@@ -5,7 +5,7 @@
   <fab-if when="show_objection_img=true">
   <agent
     id="obj_imgg"
-    image="cemetery-skeleton.png"
+    image=""
     x="center"
     y="center"
     animation="bounce-in"
