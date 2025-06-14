@@ -1,4 +1,4 @@
-<page id="prologue" bg_image="prologue_1.jpg" bg_music="02. Defendant Lobby - So it Begins.mp3">
+<page id="prologue" bg_color="black" bg_music="02. Defendant Lobby - So it Begins.mp3">
 
 <!-- IMAGEM DOS PERSONAGENS -->
   <fab-if when="phoenix_on=true">
@@ -81,21 +81,15 @@
     />
   </fab-if>
 
-
-    <agent 
-      id="pressio" 
-      image="pressionar.png"
-      x="60"
-      y="-50"
-      />
-    
-
+ 
+   
   <!-- OBJECTION: sempre aparece -->
   <agent
     id="objection"
-    text="OBJECTION!"
-    x="34"
-    y="100"
+    x=""
+    y="-60"
+    image="pressionar (2).png"
+    font-size="200"
     on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3');set(witness_on, false);set(phoenix_on,true)"
   />
 
@@ -115,8 +109,9 @@
     <agent 
       id="intro_next0"
       text=">>"
-      x="80"
-      y="45"
+      x="10"
+      y="450"
+      font-size="700"
       on_click="set(dialogue_next, 1);playSound('typing.mp3');set(judge_on,true)"
     />
  </fab-if> 
