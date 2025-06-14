@@ -380,15 +380,33 @@
     animation="typewriter"
   />
   <agent 
-    id="next_page"
+    id="next_resposta8"
     text=">>"
     x="10"
     y="450"
     font-size="700"
-    on_click="goToPage('prologue_part3')"
+    on_click="set(objection_stage, 6);playSound('typing.mp3')" 
   />
 </fab-if>
 
+  <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 6">
+  <agent 
+    id="resposta9" 
+    text='Juiz - "Pois peço que deponha de novo testemunha. Deixe bem claro que "prova" é essa."'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta9"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 5);playSound('typing.mp3')" 
+  />
+  </fab-if>
   <fab-if when="$dialogue_next = 4 and $objection_timing != 4">
   <agent 
     id="fala4" 
