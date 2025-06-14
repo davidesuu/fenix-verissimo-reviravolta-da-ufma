@@ -44,10 +44,10 @@
       />
     </fab-if>
 
-   <fab-if when="witness_on">
+   <fab-if when="acusa_on">
     <agent
       id="acusa_img"
-      image="witness_1.png" 
+      image="acusa_1.png" 
       />
     <agent
       id="acusa_name"
@@ -101,27 +101,60 @@
       x="center"
       y="500"
       animation="typewriter"
-     
-      
-    />
-    <agent
-      id="juiz_back"
-      image=""
-      />
+     />
+    
     <agent 
-      id="next_0"
+      id="intro_next0"
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next, 1);playSound('typing.mp3');set(witness_on,true)"
+      on_click="set(dialogue_next, 1);playSound('typing.mp3');set(judge_on,true);set(dialogue_next,1)"
     />
- </fab-if>
+ </fab-if> 
+ 
+  <fab-if when="$dialogue_next = 1">
+    <agent 
+      id="intro1"
+      text="Declaro aberta a sessão para o julgamento da Clara por falsificação da nota."
+      color="white"
+      x="36"
+      y="450"
+      animation="typewriter"
+     />
+    
+    <agent 
+      id="intro_next1"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,false);set(acusa_one, true);set(dialogue_next, 2)"
+    />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 2">
+    <agent 
+      id="intro2"
+      text="A acusação está pronta, Meritíssimo"
+      color="white"
+      x="36"
+      y="450"
+      animation="typewriter"
+     />
+    
+    <agent 
+      id="intro_next2"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,false);set(acusa_pn, false);set(dialogue_next, 3)"
+    />
+  </fab-if>  
 
  
   <!-- ======================== -->
   <!-- Fala 1 -->
   <!-- ======================== -->
-  <fab-if when="$dialogue_next = 1 and $objection_timing != 1">
+  <fab-if when="$dialogue_next = 2 and $objection_timing != 1">
     <agent 
       id="fala1" 
       text='"Esse caso é bem simples. Não vejo a necessidade de ir ao tribunal."' 
@@ -268,6 +301,23 @@
   <agent 
     id="resposta3" 
     text='"Eu tenho uma prova que vai mostrar que nem tudo é tão simples assim."' 
+    x="36" 
+    y="390" 
+    animation="typewriter"
+  />
+  <agent  
+  id="prox3"
+  text=">>"
+  x="80"
+  y="45"
+  on_click="set(objection_stage, 1);set(dialogue_next, 4);set(objection_timing, 4); playSound('typing.mp3')"
+  />
+</fab-if>
+
+  <fab-if when="$dialogue_next = 4 and $objection_timing = 4 and $objection_stage = 1">
+  <agent 
+    id="resposta4" 
+    text='"Eu ue vai mostrar que nem tudo é tão simples assim."' 
     x="36" 
     y="390" 
     animation="typewriter"
