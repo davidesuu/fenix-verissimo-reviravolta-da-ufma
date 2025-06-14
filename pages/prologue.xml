@@ -82,7 +82,7 @@
     text=">>"
     x="80"
     y="45"
-    on_click="set(dialogue_next, 2); set(acusa_on, true); playSound('typing.mp3')" 
+    on_click="set(dialogue_next, 2); set(acusa_on, true);set(judge_on,false); playSound('typing.mp3')" 
   />
 </fab-if>
 
@@ -116,7 +116,7 @@
     text=">>"
     x="80"
     y="45"
-    on_click="set(dialogue_next, 4); set(phoenix_on, true); playSound('typing.mp3')" 
+    on_click="set(dialogue_next, 4); set(phoenix_on, false);set(judge_on, true) playSound('typing.mp3')" 
   />
 </fab-if>
 
