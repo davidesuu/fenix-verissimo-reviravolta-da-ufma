@@ -87,7 +87,7 @@
     text="OBJECTION!"
     x="34"
     y="100"
-    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3')set(phoenix_on,true),set(witness_on,false)"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3')"
   />
 
   <!-- ======================== -->
