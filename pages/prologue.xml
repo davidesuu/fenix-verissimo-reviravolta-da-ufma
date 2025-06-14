@@ -29,7 +29,7 @@
       />
     </fab-if>
 
-    <fab-if when="witness_on">
+    <fab-if when="witness_on=true">
     <agent
       id="witness_img"
       image="witness_1.png" 
@@ -44,7 +44,7 @@
       />
     </fab-if>
 
-   <fab-if when="acusa_on">
+   <fab-if when="acusa_on=true">
     <agent
       id="acusa_img"
       image="acusa_1.png" 
@@ -127,7 +127,7 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,false);set(acusa_one, true);set(dialogue_next, 2)"
+on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(dialogue_next, 2)"
     />
   </fab-if>
 
@@ -146,9 +146,28 @@
       text=">>"
       x="80"
       y="45"
-      on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,false);set(acusa_pn, false);set(dialogue_next, 3)"
+    on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,false);set(acusa_on,false);set(phoenix_on,true);set(dialogue_next, 3)"
     />
-  </fab-if>  
+  </fab-if> 
+
+  <fab-if when="$dialogue_next = 3">
+    <agent 
+      id="intro3"
+      text="A defesa também está pronta, eu acho..."
+      color="white"
+      x="36"
+      y="450"
+      animation="typewriter"
+     />
+    
+    <agent 
+      id="intro_next3"
+      text=">>"
+      x="80"
+      y="45"
+      on_click="set(dialogue_next,1);playSound('typing.mp3');set(judge_on,true);set(acusa_on, false);set(phoenix_on, false);set(dialogue_next, 4)"
+    />
+  </fab-if>    
 
  
   <!-- ======================== -->
