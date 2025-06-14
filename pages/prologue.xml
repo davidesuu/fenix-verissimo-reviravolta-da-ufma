@@ -328,10 +328,11 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
 <fab-if when="$dialogue_next = 7 and $objection_timing = 7 and $objection_stage = 0">
   <agent 
     id="obj3" 
-    text='Its...over?! Isso nao impede de alguém alterar a nota dela apenas pra incriminar? É preciso analisar todas as possibilidades.
+    text='Its...over?! Isso nao impede de alguém ter alterado a nota dela apenas pra incriminar! É preciso analisar todas as possibilidades.
 ' 
     x="36" 
     y="450" 
+    color="white"
     animation="typewriter"
   />
   <agent 
@@ -396,5 +397,22 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   on_click="set(objection_stage, 1);set(dialogue_next, 10);set(objection_timing, 10); playSound('typing.mp3')"
   />
 </fab-if>
-  
+
+  <fab-if when="$dialogue_next = 10 and $objection_timing = 10 and objection_stage = 1">
+    <agent
+    id="resposta6"
+    text="Tudo bem, vossa Excelência"
+    x="36"
+    y="450"
+    color="white"
+    animation="typewriter"
+    />
+      <agent  
+  id="next_page"
+  text=">>"
+  x="80"
+  y="45"
+  on_click="goToPage('prologue_part2')"
+  />
+  </fab-if>
 </page>
