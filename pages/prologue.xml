@@ -87,7 +87,7 @@
     text="OBJECTION!"
     x="34"
     y="100"
-    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3')"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3')set(phoenix_on,true),set(witness_on,false)"
   />
 
   <!-- ======================== -->
@@ -196,7 +196,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 5 and $objection_timing != 5">
     <agent 
       id="fala1" 
-      text='"Esse caso é bem simples. Não vejo a necessidade de ir ao tribunal."' 
+      text='Vou te falar hein, não sei porque vocês vão se dar o trabalho ir ao tribunal. Além disso, tenho um date daqui a pouco, seja breve.' 
       x="36" 
       y="450" 
       animation="typewriter"
@@ -214,9 +214,10 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   <fab-if when="$dialogue_next = 5 and $objection_timing = 5 and $objection_stage = 0">
     <agent 
       id="obj1" 
-      text='"Simples demais. Às vezes, o diabo está nos detalhes."' 
+      text='Com quem seria esse "date"?' 
       x="36" 
-      y="390" 
+      y="450" 
+      color="white"
       animation="typewriter"
     />
     <agent 
