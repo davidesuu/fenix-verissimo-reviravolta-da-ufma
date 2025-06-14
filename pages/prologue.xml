@@ -32,6 +32,7 @@
       x="center"
       y="450"
       animation="typewriter"
+      image=""
       
     />
     <agent 
