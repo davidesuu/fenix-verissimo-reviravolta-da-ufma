@@ -32,9 +32,13 @@
       x="center"
       y="450"
       animation="typewriter"
-      image=""
+     
       
     />
+    <agent
+      id="juiz_back"
+      image="juiz_lugar.png"
+      />
     <agent 
       id="next_0"
       text=">>"
