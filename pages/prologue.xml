@@ -6,12 +6,26 @@
       id="phoenix_img"
       image="phoenix_1.png" 
       />
+    <agent
+      id="phoenix_name"
+      text="placeholder"
+      y="400"
+      x="36"
+      color="white"
+      />
     </fab-if>
   
   <fab-if when="judge_on=true">
     <agent
       id="judge_img"
       image="judge_1.png" 
+      />
+    <agent
+      id="judge_name"
+      text="placeholder"
+      y="400"
+      x="36"
+      color="white"
       />
     </fab-if>
 
@@ -27,10 +41,26 @@
       x="36"
       color="white"
     
-      
       />
-    </fab-if>  
+    </fab-if>
+
+   <fab-if when="acusa_on">
+    <agent
+      id="acusa_img"
+      image="witness_1.png" 
+      />
+    <agent
+      id="acusa_name"
+      text="placeholder"
+      y="400"
+      x="36"
+      color="white"
+    
+      />
+    </fab-if>
+
   
+  <!-- TEXT BOX DO JOGO  -->  
   <fab-if when="text_box=true">
     <agent 
       id="new_agent"
