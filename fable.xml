@@ -9,7 +9,9 @@
   <property name="show_objection_img" default="false" />
   <property name="music_on" default="false"/>
   <property name="text_box" default="true" />
-
+  <property name="judge_on" default="false" />
+  <property name="phoenix_on" default="false" />
+  <property name="witness_on" default="false" />
   <start />
   <prologue />
   <prologue_part2 />
