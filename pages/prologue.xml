@@ -1,5 +1,12 @@
 <page id="prologue" bg_image="prologue_1.jpg" bg_music="02. Defendant Lobby - So it Begins.mp3">
 
+  <fab-if when="phoenix_on=true">
+    <agent
+      id="phoenix_img"
+      image="phoenix_1.png" 
+      />
+    </fab-if>
+  
   <fab-if when="judge_on=true">
     <agent
       id="judge_img"
@@ -15,16 +22,17 @@
     <agent
       id="witness_name"
       text="placeholder"
-      y="380"
+      y="400"
       x="36"
       color="white"
+      
       />
     </fab-if>  
   
   <fab-if when="text_box=true">
     <agent 
       id="new_agent"
-      image="text_box_4.png"
+      image="text_box_real.png"
       y="390"
       x="1"
       />
@@ -59,7 +67,7 @@
       text="9 de Junho, 10:30, Sala de Audiência No.1."
       color="green"
       x="center"
-      y="450"
+      y="500"
       animation="typewriter"
      
       
