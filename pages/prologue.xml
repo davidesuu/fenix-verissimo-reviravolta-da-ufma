@@ -50,8 +50,8 @@
       image="acusa_1.png" 
       />
     <agent
-      id=""
-      text="placeholder"
+      id="acusa_name"
+      text="Flavio"
       y="400"
       x="36"
       color="white"
@@ -87,7 +87,7 @@
     text="OBJECTION!"
     x="34"
     y="100"
-    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3')"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3');set(witness_on, false);set(phoenix_on,true)"
   />
 
   <!-- ======================== -->
@@ -225,7 +225,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
       text=">>"
       x="80"
       y="45"
-      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3')" 
+      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
     />
   </fab-if>
 
@@ -282,7 +282,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
       text=">>"
       x="80"
       y="45"
-      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3')" 
+      on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
     />
   </fab-if>
 
@@ -340,7 +340,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     text=">>"
     x="80"
     y="45"
-    on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3')" 
+    on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
   />
 </fab-if>
 
