@@ -1,4 +1,4 @@
-<page id="start" bg_image="Tiltle_screen.png" bg_music="osts-vilo.mp3">
+<page id="start" bg_image="Tiltle_screen.png" bg_music="06. Phoenix Wright - Objection! 2001.mp3">
   <agent
     id="teste"
     text="..............."
@@ -19,4 +19,5 @@
     font-size="70"
     on_click="goToPage('prologue')"
   />
+
 </page>
