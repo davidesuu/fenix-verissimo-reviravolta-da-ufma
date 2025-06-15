@@ -200,7 +200,7 @@
   <fab-if when="$dialogue_next = 9">
   <agent 
     id="fala9" 
-    text='Essa é a hora que eu volto e falo pro juiz que eu nem sou licen?'
+    text='Essa é a hora que eu volto e falo pro juiz que eu nem passei na OAB ainda...'
     x="20" 
     y="456" 
     color="white"
@@ -212,10 +212,12 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true);goToPage('')"
     />
     </fab-if>
     />
+
+  
    
    
 
