@@ -1,4 +1,4 @@
-<page id="final_feliz" bg_image="Clara_Feliz.png" bg_music="ma">
+<page id="final_feliz" bg_image="Clara_Feliz.png" bg_music="14. Maya Fey - Turnabout Sisters 2001 (1).mp3">
   <!-- TEXT BOX DO JOGO  -->  
   <fab-if when="text_box=true">
     <agent 
@@ -16,7 +16,9 @@
       id="clara_"
       text="Clara"
       y="400"
-      x="36"
+      x="60"
+      animation=""
+      font-size=""
       color="white"
       />
     </fab-if>
@@ -27,10 +29,55 @@
       id="phoenix_name"
       text="Verissimo"
       y="400"
-      x="36"
+      x="60"
       color="white"
       />
     </fab-if>
 
 
+<!-- Dialogo -->
+<fab-if when="$dialogue_next = 0">
+  <agent 
+    id="fala1" 
+    text='CONSEGUIMOS FÊNIX!!"' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 1);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+
+  <fab-if when="$dialogue_next = 1">
+  <agent 
+    id="fala2" 
+    text='Ufa! Achei qu' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 1);playSound('typing.mp3')"
+    />
+    </fab-if>
+  
+
+
+
+
+
+  
 </page>
