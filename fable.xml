@@ -19,6 +19,7 @@
   <property name="pressionar" default="false" />
   <property name="evidence_stage" default="0" />
   <property name="log_evidencia" default="false" />
+  <property name="take_that_img" default="false" />
   <start />
   <prologue />
   <prologue_part2 />
