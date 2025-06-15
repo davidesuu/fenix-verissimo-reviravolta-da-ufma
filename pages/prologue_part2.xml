@@ -429,7 +429,7 @@
   <fab-if when="$dialogue_next = 4 and $objection_timing != 4">
   <agent 
     id="fala4" 
-    text='(Droga, preciso pensar em algo ou to lascado. Só tenho essas fotos inuteis comigo e mais nada. Se eu não pensar em algo vai sobrar pra Clara...).' 
+    text='(Droga, deveria ter lido os arquivos do caso, preciso pensar em algo ou to lascado. Se eu não pensar em algo vai sobrar pra Clara...).' 
     x="36" 
     y="450" 
     color="white"
