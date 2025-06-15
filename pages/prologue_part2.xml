@@ -373,7 +373,7 @@
 <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 5">
   <agent 
     id="resposta8" 
-    text='Flavio - "Apenas aguarde Meretíssimo. Os metodos desse advogado de segunda não funcionarâo mais."' 
+    text='Flavio - "Apenas aguarde Meritíssimo. Os metodos desse advogado de segunda não funcionarâo mais."' 
     x="36" 
     y="450"
     color="white"
