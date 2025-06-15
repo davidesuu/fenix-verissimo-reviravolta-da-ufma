@@ -58,7 +58,7 @@
   <fab-if when="$dialogue_next = 1">
   <agent 
     id="fala2" 
-    text='Ufa! Achei qu' 
+    text='Ufa! Por um momento eu quase achei tu era culpada mesmo. Aliás, não precisava falar aquela parte do reprovar não!!' 
     x="20" 
     y="456" 
     color="white"
@@ -70,9 +70,72 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 1);playSound('typing.mp3')"
+    on_click="set(dialogue_next, 2);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
     />
     </fab-if>
+
+
+<fab-if when="$dialogue_next = 2">
+  <agent 
+    id="fala3" 
+    text='É o que você ganha por mostrar minhas notas pra todo mundo.Mas ufa! Quem diria que não ter gravado onde fica as salas até hoje me levaria pro tribunal.' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 3);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+
+     <fab-if when="$dialogue_next = 3">
+  <agent 
+    id="fala4" 
+    text='É bem sua cara pra falar a verdade...Mas enfim, bela atitude sua no final, espero que ela consiga sair dessa' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_4"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 4);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
+    />
+    </fab-if>
+    />
+
+
+      <fab-if when="$dialogue_next = 4">
+  <agent 
+    id="fala5" 
+    text='É bem sua cara pra falar a verdade...Mas enfim, bela atitude sua no final, espero que ela consiga sair dessa' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_5"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 2);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
+    />
+    </fab-if>
+    />
+   
+
   
 
 
