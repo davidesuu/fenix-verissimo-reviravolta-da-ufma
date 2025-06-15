@@ -331,7 +331,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 5); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+    on_click="set(dialogue_next, 11);playSound('typing.mp3')" 
   />
 </fab-if>
 
@@ -430,4 +430,27 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
   on_click="set(dialogue_next, 0);set(objection_timing,0);set(objection_stage,0);set(evidence_stage_0);goToPage('prologue_part2')"
   />
   </fab-if>
+
+  <!-- ======================== -->
+<!-- Fala 4 -->
+<!-- ======================== -->
+  <fab-if when="$dialogue_next = 11 and $objection_timing != 11">
+  <agent 
+    id="falaloop" 
+    text='Veríssimo - (Droga, sabia que ia ser difícil mas não assim. Preciso pensar em qualquer coisa pra ganhar esse juiz ou vai sobrar pra Clara)' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_loop"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 5); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+  />
+</fab-if>
+
 </page>
