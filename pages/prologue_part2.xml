@@ -278,7 +278,7 @@
 <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 0">
   <agent 
     id="obj3" 
-    text='Phoenix - "Interessante você dizer que viu ela pela janela... Porque segundo a foto que estou vendo aqui, a sala não possui janela nenhuma!"' 
+    text='Phoenix - "Interessante você dizer que viu ela pela janela... Porque se eu me lembro bem, a sala não possui janela nenhuma!"' 
     x="36" 
     y="450" 
     color="white"
@@ -411,7 +411,7 @@
     <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 7">
   <agent 
     id="resposta10" 
-    text='Iris - "Tudo bem, Meritíssimo. Tudo irá ficá claro agora."'
+    text='Veríssimo - (Ufa...Então realmente não tinha nenhuma janela, ainda bem...que sorte)'
     x="36" 
     y="450"
     color="white"
@@ -419,6 +419,24 @@
   />
   <agent 
     id="next_resposta10"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 8);playSound('typing.mp3')" 
+  />
+  </fab-if>
+    <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 8">
+  <agent 
+    id="resposta11" 
+    text='Iris - "Tudo bem, Meritíssimo. Tudo irá ficá claro agora."'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta11"
     text=">>"
     x="10"
     y="450"
