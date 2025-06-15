@@ -1,4 +1,4 @@
-<page id="final_feliz" bg_image="Clara_Feliz.png">
+<page id="final_feliz" bg_image="Clara_Feliz.png" bg_music="ma">
   <!-- TEXT BOX DO JOGO  -->  
   <fab-if when="text_box=true">
     <agent 
