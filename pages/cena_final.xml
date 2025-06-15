@@ -658,7 +658,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,11);set(acusa_on,false);set(phoenix_on,true)"
+    on_click="set(evidence_stage,11);set(acusa_on,false);set(phoenix_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -677,7 +677,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,12);set(acusa_on,false);set(phoenix_on,true)"
+    on_click="set(evidence_stage,12);set(acusa_on,false);set(phoenix_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -696,7 +696,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,13)"
+    on_click="set(evidence_stage,13);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -715,7 +715,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,14);set(phoenix_on,false);set(judge_on,true)"
+    on_click="set(evidence_stage,14);set(phoenix_on,false);set(judge_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -734,7 +734,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,15);set(judge_on,false);set(phoenix_on,true)"
+    on_click="set(evidence_stage,15);set(judge_on,false);set(phoenix_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -753,7 +753,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,16)"
+    on_click="set(evidence_stage,16);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -772,7 +772,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,17);set(phoenix_on,false);set(acusa_on,true)"
+    on_click="set(evidence_stage,17);set(phoenix_on,false);set(acusa_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -791,7 +791,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,18);set(acusa_on,false);set(phoenix_on,true)"
+    on_click="set(evidence_stage,18);set(acusa_on,false);set(phoenix_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -811,14 +811,14 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,19);set(acusa_on,true);set(phoenix_on,false)"
+    on_click="set(evidence_stage,19);set(acusa_on,true);set(phoenix_on,false);playSound('typing.mp3')"
   />
   </fab-if>
 
           <fab-if when="$dialogue_next = 9 and $evidence_stage = 19">
   <agent 
     id="acerto_ev11"
-    text='Você não tem provas diss----'
+    text='Você não tem provas diss---'
     x="36" 
     y="450"
     color="white"
@@ -830,7 +830,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,20);set(acusa_on,false);set(witness_on,true)"
+    on_click="set(evidence_stage,20);set(acusa_on,false);set(witness_on,true);playSound('typing.mp3')"
   />
   </fab-if>
 
@@ -849,7 +849,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next,0);set(objection_stage,0);set(objection_timing,0);set(evidence_stage,0);set(witness_on,true);goToPage('ending')"
+    on_click="set(dialogue_next,0);set(objection_stage,0);set(objection_timing,0);set(evidence_stage,0);set(witness_on,true);goToPage('ending');playSound('typing.mp3')"
   />
   </fab-if>
 
