@@ -1,3 +1,470 @@
 <page id="last_witnessing" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página last_witnessing" color="white" font-size="24" />
+
+
+<!-- IMAGEM DOS PERSONAGENS -->
+  <fab-if when="phoenix_on=true">
+    <agent
+      id="phoenix_img"
+      image="phoenix_1.png" 
+      />
+    <agent
+      id="phoenix_name"
+      text="Verissimo"
+      y="400"
+      x="36"
+      color="white"
+      />
+    </fab-if>
+  
+  <fab-if when="judge_on=true">
+    <agent
+      id="judge_img"
+      image="judge_1.png" 
+      />
+    <agent
+      id="judge_name"
+      text="Juiz"
+      y="400"
+      x="36"
+      color="white"
+      />
+    </fab-if>
+
+    <fab-if when="witness_on=true">
+    <agent
+      id="witness_img"
+      image="witness_1.png" 
+      />
+      
+
+    </fab-if>
+
+   <fab-if when="acusa_on=true">
+    <agent
+      id="acusa_img"
+      image="acusa_1.png" 
+      />
+    <agent
+      id="acusa_name"
+      text="Flavio"
+      y="400"
+      x="36"
+      color="white"
+    
+      />
+    </fab-if>
+
+  
+  <!-- TEXT BOX DO JOGO  -->  
+  <fab-if when="text_box=true">
+    <agent 
+      id="new_agent"
+      image="text_box_real.png"
+      y="390"
+      x="1"
+      />
+  </fab-if>
+  
+   <!-- OBJECTION: IMAGEM --> 
+  <fab-if when="show_objection_img=true">
+  <agent
+    id="obj_imgg"
+    image="protesto_2.png"
+    x="50"
+    y="50"
+    animation="bounce-in"
+    />
+  </fab-if>
+
+ 
+   
+  <!-- OBJECTION: sempre aparece -->
+  <fab-if when="pressionar_img = true">
+ <agent
+    id="objection"
+    x=""
+    y="-60"
+    image="pressionar (2).png"
+    font-size="200"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3');set(witness_on, false);set(phoenix_on,true)"
+  />
+  </fab-if>
+
+  
+
+<!-- ======================== -->
+<!-- INTRODUÇAO -->
+<!-- ======================== -->
+ <fab-if when="dialogue_next = 0">
+   <agent
+     id="intro"
+     text="Depoimento 2: O crime"
+     x="center"
+     y="500"
+     color="green"
+     animation="typewriter"
+     />
+
+   <agent 
+    id="next_0"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 1);set(witness_on, true);set(pressionar_img,true);playSound('typing.mp3')" 
+  />
+ </fab-if>
+  
+
+<!-- ======================== -->
+<!-- Fala 1 -->
+<!-- ======================== -->
+<fab-if when="$dialogue_next = 1 and $objection_timing != 1">
+  <agent 
+    id="fala1" 
+    text='Iris - "Bom, eu tinha acabado de almoçar no R.U e resolvi voltar pro prédio pra pegar minha bolsa."' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+    color="white"
+  />
+  <agent 
+    id="next_1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 2);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 0">
+  <agent 
+    id="obj1" 
+    text='Phoenix - "Interessante... qual era o almoço no dia??"' 
+    x="36" 
+    y="450" 
+    animation="typewriter"
+    color="white"
+  />
+  <agent 
+    id="next_obj1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on, false);set(witness_on, true)" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 1">
+  <agent 
+    id="resposta1" 
+    text='Juiz - "Qual a relevância dessa pergunta, senhor Veríssimo?"'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 2);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 2">
+  <agent 
+    id="resposta2" 
+    text='Phoenix - "Nenhuma... só queria comer mesmo."' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 2); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<!-- ======================== -->
+<!-- Fala 2 -->
+<!-- ======================== -->
+<fab-if when="$dialogue_next = 2 and $objection_timing != 2">
+  <agent 
+    id="fala2" 
+    text='Iris - "Assim que eu entrei no prédio, vi ela indo pro corredor da sala de manutenção, então eu resolvi seguir ela achando que ela estava perdida."' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 3);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 2 and $objection_timing = 2 and $objection_stage = 0">
+  <agent 
+    id="obj2" 
+    text='Phoenix - "Seguindo ela? Me parece meio suspeito... Por que não só chamou ela diretamente?"' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');;set(phoenix_on, false);set(witness_on, true)" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 2 and $objection_timing = 2 and $objection_stage = 1">
+  <agent 
+    id="resposta3" 
+    text='Iris - "Ela tava de fone e eu não queria incomodar, só segui pra confirmar."' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 3); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<!-- ======================== -->
+<!-- Fala 3 -->
+<!-- ======================== -->
+<fab-if when="$dialogue_next = 3 and $objection_timing != 3">
+  <agent 
+    id="fala3" 
+    text='Iris - "Mas assim que eu cheguei perto da sala, vi pela janela que ela estava mexendo no computador parecendo nervosa. Naquela hora entendi tudo, depois da nota baixa sobrou nada pra ela."' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 4);playSound('typing.mp3')" 
+  />
+</fab-if>
+  
+
+<fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 0">
+  <agent 
+    id="obj3" 
+    text='Phoenix - "Interessante você dizer que viu ela pela janela... Porque se eu me lembro bem, a sala não possui janela nenhuma!"' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 1);set(show_objection_img, false);playSound('typing.mp3');set(phoenix_on, false);set(witness_on, true)" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 1">
+  <agent 
+    id="resposta4" 
+    text='Flavio - "O QUE??"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta4"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 2);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 2">
+  <agent 
+    id="resposta5" 
+    text='Juiz - "Se explique agora testemunha!"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta5"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 3);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 3">
+  <agent 
+    id="resposta6" 
+    text='Iris - "E... eu... Eu confundi! Não foi pela janela, foi pela porta, sim. Além disso, ainda tenho uma prova infalível comigo."' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta6"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 4);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 4">
+  <agent 
+    id="resposta7" 
+    text='Juiz - "Que prova??"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta7"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 5);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+<fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 5">
+  <agent 
+    id="resposta8" 
+    text='Flavio - "Apenas aguarde Meretíssimo. Os metodos desse advogado de segunda não funcionarâo mais."' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta8"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 6);playSound('typing.mp3')" 
+  />
+</fab-if>
+
+  <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 6">
+  <agent 
+    id="resposta9" 
+    text='Juiz - "Pois peço que deponha de novo testemunha. Deixe bem claro que "prova" é essa."'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta9"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 7);playSound('typing.mp3')" 
+  />
+  </fab-if>
+
+    <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 7">
+  <agent 
+    id="resposta10" 
+    text='Veríssimo - (Ufa...Então realmente não tinha nenhuma janela, ainda bem...que sorte)'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta10"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 8);playSound('typing.mp3')" 
+  />
+  </fab-if>
+    <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 8">
+  <agent 
+    id="resposta11" 
+    text='Iris - "Tudo bem, Meritíssimo. Tudo irá ficá claro agora."'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_resposta11"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="goToPage('last_witnessing')"
+  />
+  </fab-if>
+  
+<!-- LOOP DE FALHA: PLAYER NÃO ACERTOU NENHUM OBJECTION -->  
+  <fab-if when="$dialogue_next = 4 and $objection_timing != 4">
+  <agent 
+    id="fala4" 
+    text='(Droga, deveria ter lido os arquivos do caso, preciso pensar em algo ou to lascado. Se eu não pensar em algo vai sobrar pra Clara...).' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_4"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 1); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
+  />
+  </fab-if> 
 </page>
