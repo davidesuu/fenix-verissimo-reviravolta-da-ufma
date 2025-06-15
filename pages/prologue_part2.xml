@@ -444,6 +444,8 @@
     on_click="goToPage('last_witnessing')"
   />
   </fab-if>
+  
+<!-- LOOP DE FALHA: PLAYER NÃO ACERTOU NENHUM OBJECTION -->  
   <fab-if when="$dialogue_next = 4 and $objection_timing != 4">
   <agent 
     id="fala4" 
