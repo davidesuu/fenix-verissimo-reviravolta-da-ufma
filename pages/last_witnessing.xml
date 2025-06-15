@@ -80,7 +80,7 @@
   <fab-if when="log_evidencia = false">
     <agent
       id="log_evidencia"
-      image="Prova1.png"
+      image="prova_1.png"
       />
     
     </fab-if>
