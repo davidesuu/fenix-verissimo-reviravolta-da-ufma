@@ -22,6 +22,7 @@
   <property name="take_that_img" default="false" />
   <property name="clara_nome" default="true" />
   <start />
+  <comeco />
   <prologue />
   <prologue_part2 />
   <last_witnessing />
