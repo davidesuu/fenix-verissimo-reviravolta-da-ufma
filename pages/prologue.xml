@@ -1,4 +1,4 @@
-<page id="prologue" bg_color="black" bg_music="04. Cross-Examination - Moderato 2001.mp3">
+<page id="prologue" bg_color="black" bg_music="03. Phoenix Wright- Ace Attorney - Court is Now in Session.mp3">
 
 <!-- IMAGEM DOS PERSONAGENS -->
   <fab-if when="phoenix_on=true">
@@ -114,7 +114,7 @@
   <fab-if when="$dialogue_next = 1">
     <agent 
       id="intro1"
-      text="Declaro aberta a sessão para o julgamento da Clara por falsificação da nota."
+      text="Declaro aberta a sessão para o julgamento da Clara por falsificação de documentos públicos."
       color="white"
       x="36"
       y="450"
