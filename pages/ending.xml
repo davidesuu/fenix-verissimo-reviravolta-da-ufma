@@ -334,7 +334,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 0);playSound('typing.mp3');set(witness_on,false);set(phoenix_on, false);set(judge_on,false);goToPage('casa')" 
+    on_click="set(dialogue_next, 0);playSound('typing.mp3');set(witness_on,false);set(phoenix_on, false);set(judge_on,false);goToPage('final_feliz')" 
    />
 </fab-if>
   
