@@ -76,7 +76,14 @@
     />
   </fab-if>
 
- 
+ <!-- TAKE THAT!! Prova1--> 
+  <fab-if when="log_evidencia = false">
+    <agent
+      id="log_evidencia"
+      image="Prova1.png"
+      />
+    
+    </fab-if>
    
   <!-- OBJECTION: sempre aparece -->
   <fab-if when="pressionar_img = true">
