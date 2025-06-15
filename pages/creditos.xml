@@ -26,5 +26,13 @@ Todos os personagens, imagens, músicas e nomes utilizados neste projeto pertenc
     color="white"
     y="center"
     />
+
+    <agent 
+    id="voltar" 
+    text="<<<"
+    font-size="50"
+    color="white"
+    on_click="reset()" 
+    />
   
 </page>
