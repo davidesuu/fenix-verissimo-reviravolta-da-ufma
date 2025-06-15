@@ -1,3 +1,60 @@
-<page id="comeco" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página comeco" color="white" font-size="24" />
+<page id="comeco" bg_image="Clara_triste.png">
+ 
+   <!-- TEXT BOX DO JOGO  -->  
+  <fab-if when="text_box=true">
+    <agent 
+      id="new_agent"
+      image="text_box_real.png"
+      y="393"
+      x="1"
+      />
+  </fab-if>
+
+  
+ <!-- CLARA NOME  --> 
+  <fab-if when="clara_nome=true">
+    <agent
+      id="clara_"
+      text="Clara"
+      y="400"
+      x="60"
+      animation=""
+      font-size=""
+      color="white"
+      />
+    </fab-if>
+
+  <!-- Fênix NOME  --> 
+  <fab-if when="phoenix_on=true">
+    <agent
+      id="phoenix_name"
+      text="Verissimo"
+      y="400"
+      x="60"
+      color="white"
+      />
+    </fab-if>
+
+
+<!-- Dialogo -->
+<fab-if when="$dialogue_next = 0">
+  <agent 
+    id="fala1" 
+    text='FÊNIX!!!! Ainda bem que você chegou, o tribunal já vai começar!"' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 1);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+
+
 </page>
