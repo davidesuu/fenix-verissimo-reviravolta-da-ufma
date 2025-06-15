@@ -639,7 +639,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,10);set(witness_on,false);set(acusa_on,true);set(take_that_img, false)"
+    on_click="set(evidence_stage,10);set(witness_on,false);set(acusa_on,true);set(take_that_img, false);playSound('typing.mp3')"
   />
   </fab-if>
 
