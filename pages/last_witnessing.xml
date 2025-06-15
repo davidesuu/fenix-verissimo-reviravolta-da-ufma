@@ -84,13 +84,9 @@
       y="350"
       x="710"
       animation="wiggle"
+      on_click="set(evidence_stage, 1)"
       />
-
-  <!-- TAKE THAT!! Prova1 imagem--> 
-  
-
-    
-    </fab-if>
+  </fab-if>
    
   <!-- OBJECTION: sempre aparece -->
   <fab-if when="pressionar_img = true">
