@@ -84,12 +84,15 @@
       y="350"
       x="710"
       animation="wiggle"
-      on_click="set(evidence_stage, $dialogue_next)"
+      on_click="set(evidence_stage, $dialogue_next);set(take_that_img, true);playSound('take-that-ace-attorney.mp3')"
       />
   </fab-if>
 
-  <fab-if when="take_that_img=false">
-    <agent id="take_that" image="take_that.png" />
+  <fab-if when="take_that_img=true">
+    <agent id="take_that" image="takethatt.png"
+    x="200"
+    y="111"
+    />
   </fab-if>
    
   <!-- OBJECTION: sempre aparece -->
@@ -422,7 +425,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next,4)"
+    on_click="set(dialogue_next,4);set(take_that_img, false)"
   />
   </fab-if>
 
