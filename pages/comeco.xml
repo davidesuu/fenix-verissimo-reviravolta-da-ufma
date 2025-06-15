@@ -56,5 +56,23 @@
     />
     </fab-if>
 
+   <fab-if when="$dialogue_next = 1">
+  <agent 
+    id="fala2" 
+    text='Ufa! Por um momento eu quase achei tu era culpada mesmo. Aliás, não precisava falar aquela parte do reprovar não!!' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 2);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
+    />
+    </fab-if>
 
 </page>
