@@ -427,7 +427,7 @@ on_click="playSound('typing.mp3');set(judge_on,false);set(acusa_on, true);set(di
       x="10"
       y="450"
       font-size="700"  
-  on_click="set(dialogue_next, 0);set(objection_timing,0);set(objection_stage,0);set(evidence_stage_0);goToPage('prologue_part2')"
+  on_click="set(dialogue_next, 0);goToPage('prologue_part2');set(objection_timing,0);set(objection_stage,0);set(evidence_stage_0);goToPage('prologue_part2')"
   />
   </fab-if>
 
