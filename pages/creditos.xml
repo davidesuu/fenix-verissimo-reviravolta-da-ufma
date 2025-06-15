@@ -1,4 +1,4 @@
-<page id="creditos" bg_color="black">
+<page id="creditos" bg_color="black" bg_music="26. Phoenix Wright Ace Attorney - Ending.mp3">
   <!-- MENSAGEM SECRETA PRA QUEM FOI ATE O FINAL -->
   <fab-if when="$dialogue_next = 10">
   <agent 
