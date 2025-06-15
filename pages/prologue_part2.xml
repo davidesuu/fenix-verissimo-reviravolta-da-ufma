@@ -441,7 +441,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="goToPage('last_witnessing')"
+    on_click="set(dialogue_next, 0);goToPage('last_witnessing')"
   />
   </fab-if>
   
