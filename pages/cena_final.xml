@@ -514,7 +514,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 10);playSound('typing.mp3';set(evidence)" 
+    on_click="set(log_evidencia,true);set(objection_stage, 0);set(objection_timing, 0);set(dialogue_next, 8);playSound('typing.mp3');set(phoenix_on,false);set(witness_on,true)" 
   />
     </fab-if>
 
