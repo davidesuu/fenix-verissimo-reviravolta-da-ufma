@@ -84,7 +84,7 @@
       y="350"
       x="710"
       animation="wiggle"
-      on_click="set(evidence_stage, 1)"
+      on_click="set(evidence_stage, $dialogue_next)"
       />
   </fab-if>
    
@@ -127,7 +127,7 @@
   
 
 <!-- Fala 1 -->
-<fab-if when="$dialogue_next = 1 and $objection_timing != 1">
+<fab-if when="$dialogue_next = 1 and $objection_timing != 1 and evidence_stage = 0">
   <agent 
     id="fala1" 
     text='Iris - "Depois que eu vi ela entrando na sala, fui correndo pra avisar ela que não podia entrar, já que aquela sala era apenas pra pessoas com autorização."' 
@@ -186,7 +186,7 @@
 </fab-if>
 
 <!-- Fala 2 -->
-<fab-if when="$dialogue_next = 2 and $objection_timing != 2">
+<fab-if when="$dialogue_next = 2 and $objection_timing != 2 and evidence_stage = 0">
   <agent 
     id="fala2" 
     text='Iris - "Mas assim que entrei, vi ela usando o computador apressada, como se já tivesse um objetivo quando entrou naquela sala. Meu senso de justiça ativou naquele momento..."' 
@@ -245,7 +245,7 @@
 </fab-if>
 
 <!-- Fala 3 -->
-<fab-if when="$dialogue_next = 3 and $objection_timing != 3">
+<fab-if when="$dialogue_next = 3 and $objection_timing != 3 and evidence_stage = 0">
   <agent 
     id="fala3" 
     text='Iris - "Então tentei não fazer nenhum barulho e... Clik! Aqui a foto!! Às 12:43 na quinta-feira."' 
@@ -342,7 +342,7 @@
 </fab-if>
 
 <!-- LOOP DE ERRO (caso o jogador não acerte nenhum objection) -->
-<fab-if when="$dialogue_next = 4 and $objection_timing != 4">
+<fab-if when="$dialogue_next = 4 and $objection_timing != 4 and evidence_stage = 0">
   <agent 
     id="erro" 
     text='(Droga... Preciso pensar melhor. Se continuar assim, não vou conseguir proteger a Clara...)' 
@@ -360,4 +360,84 @@
     on_click="set(dialogue_next, 1); set(objection_stage, 0); set(objection_timing, -1);playSound('typing.mp3')" 
   />
 </fab-if>
+
+
+   <!-- DIALOGO de evidencia fala 1--> 
+  <fab-if when="$dialogue_next = 1 and $evidence_stage = 1">
+  <agent 
+    id="falha_ev1"
+    text='Juiz - "Senhor Veríssimo, não vou mais tolerar suas brincadeiras! Declaro Clara culpada!"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_ev1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="reset()"
+  />
+  </fab-if>
+
+   <!-- DIALOGO de evidencia fala 2-->  
+  <fab-if when="$dialogue_next = 2 and $evidence_stage = 2">
+  <agent 
+    id="falha_ev2"
+    text='Juiz - "Senhor Veríssimo, não vou mais tolerar suas brincadeiras! Declaro Clara culpada!"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_ev2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="reset()"
+  />
+  </fab-if>
+
+    <!-- DIALOGO de evidencia fala 3--> 
+    <fab-if when="$dialogue_next = 3 and $evidence_stage = 3">
+  <agent 
+    id="right_ev3"
+    text="Como você explica isso agora?? A sua foto mostra 12:43... Mas o log de entrada mostra claramente que o acesso foi às 12:40!!!!!"
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_ev3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next,4)"
+  />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 4 and $evidence_stage = 3">
+  <agent 
+    id="right_ev4"
+    text='Verríssimo - "A única explicação possível que sobra é... VOCÊ CHEGOU ANTES DELA NA SALA!"'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_ev4"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next,5)"
+  />
+  </fab-if>
 </page>
