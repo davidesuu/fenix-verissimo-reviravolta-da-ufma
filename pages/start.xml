@@ -1,7 +1,7 @@
 <page id="start" bg_image="Tiltle_screen.png" bg_music="Ace Attorney Trilogy OST - Title Theme.mp3">
   <agent
     id="teste"
-    text="..............."
+    text="................"
     color="white"
     x="400"
     y="520"
@@ -17,7 +17,7 @@
     y="520"
     x="120"
     font-size="70"
-    on_click="goToPage('prologue')"
+    on_click="goToPage('crime')"
   />
 
 </page>
