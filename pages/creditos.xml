@@ -21,5 +21,10 @@
 
   <agent
     id="Direitos"
-    text="TODAS "
+    text="Aviso Legal:
+Todos os personagens, imagens, músicas e nomes utilizados neste projeto pertencem à Capcom Co., Ltd. Este jogo é uma produção não oficial feita exclusivamente para fins acadêmicos e educacionais, sem qualquer intenção de lucro. Nenhum direito autoral é reivindicado sobre o conteúdo original da série Ace Attorney."
+    color="white"
+    y="center"
+    />
+  
 </page>
