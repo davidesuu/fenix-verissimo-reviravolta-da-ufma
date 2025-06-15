@@ -78,12 +78,12 @@
   </fab-if>
 
  <!-- TAKE THAT!! Prova1 imagem--> 
-  <fab-if when="log_evidencia = true">
+  <fab-if when="log_evidencia = false">
     <agent
       id="log_evidencia"
-      image="prova_1.png"
-      y="350"
-      x="710"
+      image="celular.png"
+      y="300"
+      x="500"
       animation="wiggle"
       on_click="set(evidence_stage, $dialogue_next);set(take_that_img, true);playSound('take-that-ace-attorney.mp3')"
       />
