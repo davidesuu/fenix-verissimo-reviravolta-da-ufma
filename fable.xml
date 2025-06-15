@@ -18,6 +18,7 @@
   <property name="objection_stage" default="0" />  
   <property name="pressionar" default="false" />
   <property name="evidence_stage" default="0" />
+  <property name="log_evidencia" default="false" />
   <start />
   <prologue />
   <prologue_part2 />
