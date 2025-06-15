@@ -1,4 +1,4 @@
-<page id="ending" bg_image="ta_back_fate.png" bg_music="osts-vilo.mp3">
+<page id="ending" bg_image="ta_back_fate.png" bg_music="17. Reminiscences - Maya's Sorrow.mp3">
   <agent
     id="teste"
     text="Hello World Ending"
