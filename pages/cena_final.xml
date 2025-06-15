@@ -262,7 +262,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 8);playSound('typing.mp3')" 
+    on_click="set(dialogue_next, 8);playSound('typing.mp3');set(pressionar_img, true)" 
   />
     </fab-if>  
 
@@ -270,7 +270,7 @@
 <!-- FALA 1 IRIS -->
 <!-- ======================== -->
 
-        <fab-if when="$dialogue_next = 8 and $objection_timing != 1 and evidence_stage = 0">
+        <fab-if when="$dialogue_next = 8 and $objection_timing != 8 and evidence_stage = 0">
   <agent 
     id="fala9" 
     text='I... isso é impossivel, eu vi ela mexendo no PC, está claro foi ela, ela ficou frustrada com a nota e esse foi o motivo!!' 
@@ -285,9 +285,68 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 7);playSound('typing.mp3')" 
+    on_click="set(dialogue_next, 9);playSound('typing.mp3')" 
   />
     </fab-if>
+
+    <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and objection_stage = 0">
+  <agent 
+    id="obj1" 
+    text='Ou era você que estava naquela sala antes e tirou a foto minutos depois que ela entrou?'
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 1);playSound('typing.mp3');set(phoenix_on, false);set(witness_on,true)" 
+  />
+    </fab-if>
+
+      <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and objection_stage = 1">
+  <agent 
+    id="obj2" 
+    text='Iris - "Não!! Se eu estivesse na sala ela teria me visto! Além disso, sou uma aluna excelente, não teria motivos pra eu mudar minha nota!!"' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 2);playSound('typing.mp3');(judge_on, true);set(witness_on,false)" 
+  />
+    </fab-if>
+
+    <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and objection_stage = 2">
+  <agent 
+    id="obj3" 
+    text='Ela está certa nesse ponto Veríssimo. O Flávio estava me falando antes o quão boa são as notas dela, não vejo motivos pra ela recorrer á algo tão baixo' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 2);playSound('typing.mp3')" 
+  />
+    </fab-if>
+
+
 
   
   
