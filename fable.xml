@@ -17,6 +17,7 @@
   <property name="objection_timing" default="0" />
   <property name="objection_stage" default="0" />  
   <property name="pressionar" default="false" />
+  <property name="evidence_stage" default="0" />
   <start />
   <prologue />
   <prologue_part2 />
