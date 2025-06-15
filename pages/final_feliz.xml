@@ -171,7 +171,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
+    on_click="set(dialogue_next, 8);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
     />
     </fab-if>
     />
@@ -212,7 +212,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true);goToPage('')"
+    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true);goToPage('creditos')"
     />
     </fab-if>
     />
