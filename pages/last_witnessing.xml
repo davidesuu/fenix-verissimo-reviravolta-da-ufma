@@ -444,7 +444,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="goToPage('cena_final')"
+    on_click="set(dialogue_next,0);set(objection_stage,0);set(objection_timing,0);set(evidence_stage,0);goToPage('cena_final')"
   />
   </fab-if>
 </page>
