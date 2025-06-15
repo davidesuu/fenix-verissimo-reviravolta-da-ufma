@@ -59,7 +59,7 @@
    <fab-if when="$dialogue_next = 1">
   <agent 
     id="fala2" 
-    text='Ufa! Por um momento eu quase achei tu era culpada mesmo. Aliás, não precisava falar aquela parte do reprovar não!!' 
+    text='Já?? Nem consegui terminar de ler todos os arquivos do caso... resume pra mim o que tá acontecendo, rápido.' 
     x="20" 
     y="456" 
     color="white"
