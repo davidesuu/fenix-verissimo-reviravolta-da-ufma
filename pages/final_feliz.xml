@@ -1,4 +1,4 @@
-<page id="final_feliz" bg_color="black">
+<page id="final_feliz" bg_image="clara">
   <agent 
     id="next_page"
     text="aa"
