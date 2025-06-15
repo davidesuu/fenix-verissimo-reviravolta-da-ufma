@@ -118,7 +118,7 @@
       <fab-if when="$dialogue_next = 4">
   <agent 
     id="fala5" 
-    text='É bem sua cara pra falar a verdade...Mas enfim, bela atitude sua no final, espero que ela consiga sair dessa' 
+    text='É...eu sei bem como é essa pressão, ninguém sabe como tá a mente do palhaço.' 
     x="20" 
     y="456" 
     color="white"
@@ -130,10 +130,93 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 2);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
+    on_click="set(dialogue_next, 5);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
     />
     </fab-if>
     />
+
+
+  <fab-if when="$dialogue_next = 5">
+  <agent 
+    id="fala6" 
+    text='Não que eu esteja tirando 10 agora, mas já passei por isso. Mas tenho certeza que com a ajuda certa ela sai dessa. O que importa é que tudo tá resolvido no final graças a você!' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_6"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 6);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+    />
+
+  <fab-if when="$dialogue_next = 6">
+  <agent 
+    id="fala7" 
+    text='Tudo inclusive aquela dívida agora, né?'
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_7"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, true);set(phoenix_on,false)"
+    />
+    </fab-if>
+    />
+
+
+  <fab-if when="$dialogue_next = 8">
+  <agent 
+    id="fala8" 
+    text='Uma coisa não exclui a outra. Ainda sou universitaria lembra??'
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_8"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 9);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+    />
+
+  <fab-if when="$dialogue_next = 9">
+  <agent 
+    id="fala9" 
+    text='Essa é a hora que eu volto e falo pro juiz que eu nem sou licen?'
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_9"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 7);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+    />
+   
    
 
   
