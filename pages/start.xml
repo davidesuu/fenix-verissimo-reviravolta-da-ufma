@@ -1,21 +1,22 @@
-<page id="start" bg_image="t" bg_music="osts-vilo.mp3">
+<page id="start" bg_image="Tiltle_screen.png" bg_music="osts-vilo.mp3">
   <agent
     id="teste"
-    text="Mumei"
+    text="..............."
     color="white"
-    x="center"
-    y="90"
+    x="400"
+    y="520"
     font-size="70"
+    on_click="goToPage('creditos')"
   />
 
   <agent
     id="next_page_text"
-    text="Proxima Pagina"
+    text="................"
     animation=""
     color="white"
-    y="490"
-    x="center"
-    font-size="30"
+    y="520"
+    x="120"
+    font-size="70"
     on_click="goToPage('prologue')"
   />
 </page>
