@@ -1,4 +1,4 @@
-<page id="prologue_part2" bg_color="black" bg_music="06. Phoenix Wright - Objection! 2001.mp3">
+<page id="prologue_part2" bg_color="black" bg_music="07. Cross-Examination - Allegro 2001.mp3">
 
 <!-- IMAGEM DOS PERSONAGENS -->
   <fab-if when="phoenix_on=true">
