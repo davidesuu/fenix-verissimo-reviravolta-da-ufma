@@ -1,29 +1,36 @@
-<page id="final_feliz" bg_image="clara">
-  <agent 
-    id="next_page"
-    text="aa"
-    x="100"
-    y="65"
-    on_click="set(dialogue_next_2, $dialogue_next_2 + 1)"
-    />
-
-  <fab-if when="$dialogue_next_2 = 0">
-    <agent
-      id="dialogue_1"
-      text="oiii"
-      x="36"
-      y="386"
-      animation="typewriter"
-      />
-    </fab-if>
-  
-  <fab-if when="$dialogue_next_2 = 1">
-    <agent
-      id="dialogue_2"
-      text="olaaa,olaaaa"
-      x="36"
-      y="386"
-      animation="typewriter"
+<page id="final_feliz" bg_image="Clara_Feliz.png">
+  <!-- TEXT BOX DO JOGO  -->  
+  <fab-if when="text_box=true">
+    <agent 
+      id="new_agent"
+      image="text_box_real.png"
+      y="393"
+      x="1"
       />
   </fab-if>
+
+  
+ <!-- CLARA NOME  --> 
+  <fab-if when="clara_nome=true">
+    <agent
+      id="clara_"
+      text="Clara"
+      y="400"
+      x="36"
+      color="white"
+      />
+    </fab-if>
+
+  <!-- Fênix NOME  --> 
+  <fab-if when="phoenix_on=true">
+    <agent
+      id="phoenix_name"
+      text="Verissimo"
+      y="400"
+      x="36"
+      color="white"
+      />
+    </fab-if>
+
+
 </page>
