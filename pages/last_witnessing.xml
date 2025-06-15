@@ -76,12 +76,19 @@
     />
   </fab-if>
 
- <!-- TAKE THAT!! Prova1--> 
-  <fab-if when="log_evidencia = false">
+ <!-- TAKE THAT!! Prova1 imagem--> 
+  <fab-if when="log_evidencia = true">
     <agent
       id="log_evidencia"
       image="prova_1.png"
+      y="350"
+      x="710"
+      animation="wiggle"
       />
+
+  <!-- TAKE THAT!! Prova1 imagem--> 
+  
+
     
     </fab-if>
    
