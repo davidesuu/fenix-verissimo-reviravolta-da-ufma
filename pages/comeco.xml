@@ -75,4 +75,23 @@
     />
     </fab-if>
 
+  <fab-if when="$dialogue_next = 2">
+  <agent 
+    id="fala3" 
+    text='Tão me acusando de ter entrado no sistema do sigaa e mudado minha nota em cálculo!! Eu nem usar o sigaa direito quem dirá invadir.' 
+    x="20" 
+    y="456" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 3);playSound('typing.mp3');set(clara_nome, false);set(phoenix_on,true)"
+    />
+    </fab-if>
+
 </page>
