@@ -1,4 +1,4 @@
-<page id="crime" bg_color="black">
+<page id="crime" bg_color="black" bg_music="01. Phoenix Wright- Ace Attorney - Opening.mp3">
    <!-- TEXT BOX DO JOGO  -->  
   <fab-if when="text_box=true">
     <agent 
@@ -8,4 +8,106 @@
       x="1"
       />
   </fab-if>
+
+  
+<!-- Dialogo -->
+<fab-if when="$dialogue_next = 0">
+  <agent 
+    id="fala1" 
+    text='Agora é só mudar a nota e sair daqui correndo..."'
+    x="20" 
+    y="456" 
+    color="red"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 1);playSound('typing.mp3')"
+    />
+    </fab-if>
+
+  <fab-if when="$dialogue_next = 1">
+  <agent 
+    id="fala2" 
+    text='Foi mais fácil do que eu pensava, finalmente vou me livrar daquilo' 
+    x="20" 
+    y="456" 
+    color="red"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 2);playSound('typing.mp3')"
+    />
+    </fab-if>
+
+
+<fab-if when="$dialogue_next = 2">
+  <agent 
+    id="fala3" 
+    text='Passos? Droga, preciso me esconder rápido....É a caloura? O que ela ta fazendo aqui?' 
+    x="20" 
+    y="456" 
+    color="red"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 3);playSound('typing.mp3')"
+    />
+    </fab-if>
+
+  <fab-if when="$dialogue_next = 3">
+  <agent 
+    id="fala4" 
+    text='Ela deve ter me visto, droga!!' 
+    x="20" 
+    y="456" 
+    color="red"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_4"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 4);playSound('typing.mp3')"
+    />
+    </fab-if>
+    />
+
+
+      <fab-if when="$dialogue_next = 4">
+  <agent 
+    id="fala5" 
+    text='Preciso fazer algo... ela tá usando o pc? perfeito.. *click*' 
+    x="20" 
+    y="456" 
+    color="red"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_5"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 0);playSound('typing.mp3');goToPage('comeco')"
+    />
+    </fab-if>
+    
+  
 </page>
