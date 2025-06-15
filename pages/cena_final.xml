@@ -450,7 +450,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 11);playSound('typing.mp3');set(phoenix_on,true)" 
+    on_click="set(dialogue_next, 11);playSound('typing.mp3');set(witnsess_on,true)" 
   />
     </fab-if>
    
@@ -458,9 +458,65 @@
 
   
 <!-- ======================== -->
-<!-- LOOP 3 -->
+<!-- CELULAR ON -->
 <!-- ======================== -->   
 
+<fab-if when="$dialogue_next = 11 and $objection_timing != 11 and $evidence_stage = 0">
+  <agent 
+    id="fala12" 
+    text='(Droga, como ela ta conseguindo escapar com esses argumetos horriveis? Preciso achar algo útil nessa mesa além desses papeis, não tenho mais tempo pra ler...)" ' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_12"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 12);playSound('typing.mp3');set(witness_on,false);set(phoenix_on,true)" 
+  />
+    </fab-if>
+
+  <fab-if when="$dialogue_next = 12 and $objection_timing != 12 and $evidence_stage = 0">
+  <agent 
+    id="fala13" 
+    text='(....O celular da Clara? Vai ter que ser isso.) ' 
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_13"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 13);playSound('typing.mp3')" 
+  />
+    </fab-if>
+
+    <fab-if when="$dialogue_next = 13 and $objection_timing != 13 and $evidence_stage = 0">
+  <agent 
+    id="fala14" 
+    text='Celular da Clara adquirido'
+    x="center" 
+    y="500" 
+    color="green"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_14"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next, 10);playSound('typing.mp3';set(evidence)" 
+  />
+    </fab-if>
 
 
 
