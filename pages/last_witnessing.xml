@@ -92,6 +92,7 @@
     <agent id="take_that" image="takethatt.png"
     x="200"
     y="111"
+    animation="bounce-in"
     />
   </fab-if>
    
@@ -157,7 +158,7 @@
 <fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 0">
   <agent 
     id="obj1" 
-    text='Phoenix - "Então por que você entrou na sala??"' 
+    text='Veríssimo - "Então por que você entrou na sala??"' 
     x="36" 
     y="450"
     color="white"
@@ -216,7 +217,7 @@
 <fab-if when="$dialogue_next = 2 and $objection_timing = 2 and $objection_stage = 0">
   <agent 
     id="obj2" 
-    text='Phoenix - "Então mostre alguma prova que ela realmente estava lá!"' 
+    text='Veríssimo - "Então mostre alguma prova que ela realmente estava lá!"' 
     x="36" 
     y="450"
     color="white"
@@ -332,7 +333,7 @@
 <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 3">
   <agent 
     id="phoenix1" 
-    text='Phoenix - "......Isso! As provas, o log de entrada!"' 
+    text='Veríssimo - "......Isso! As provas, o log de entrada!"' 
     x="36" 
     y="450"
     color="white"
