@@ -1,4 +1,4 @@
-<page id="start" bg_image="ta_back_fate.png" bg_music="osts-vilo.mp3">
+<page id="start" bg_image="t" bg_music="osts-vilo.mp3">
   <agent
     id="teste"
     text="Mumei"
