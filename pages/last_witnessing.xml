@@ -158,7 +158,7 @@
 <fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 0">
   <agent 
     id="obj1" 
-    text='Veríssimo - "Então por que você entrou na sala??"' 
+    text='Veríssimo - "Então por que você entrou na sala?"' 
     x="36" 
     y="450"
     color="white"
@@ -426,7 +426,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next,4);set(take_that_img, false)"
+    on_click="set(dialogue_next,4);set(take_that_img, false);playSound('typing.mp3')"
   />
   </fab-if>
 
