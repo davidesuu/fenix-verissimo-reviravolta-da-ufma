@@ -798,20 +798,58 @@
 
         <fab-if when="$dialogue_next = 9 and $evidence_stage = 18">
   <agent 
-    id="acerto_ev9"
-    text='IMPOSSÍVEL!!!!!!'
+    id="acerto_ev10"
+    text='ADMITA IRIS! Foi você que alterou a nota! O motivo, bem... ainda não sei, mas foi você!'
     x="36" 
     y="450"
     color="white"
     animation="typewriter"
   />
   <agent 
-    id="acerto_next9"
+    id="acerto_next10"
     text=">>"
     x="10"
     y="450"
     font-size="700"
-    on_click="set(evidence_stage,17);set(acusa_on,false);set(phoenix_on,true)"
+    on_click="set(evidence_stage,19);set(acusa_on,true);set(phoenix_on,false)"
+  />
+  </fab-if>
+
+          <fab-if when="$dialogue_next = 9 and $evidence_stage = 19">
+  <agent 
+    id="acerto_ev11"
+    text='Você não tem provas diss----'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next11"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,20);set(acusa_on,false);set(witness_on,true)"
+  />
+  </fab-if>
+
+            <fab-if when="$dialogue_next = 9 and $evidence_stage = 20">
+  <agent 
+    id="acerto_ev12"
+    text='Fui...eu'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next12"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next,0)"
   />
   </fab-if>
 
