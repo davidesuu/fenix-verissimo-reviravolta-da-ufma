@@ -104,7 +104,7 @@
     y="-60"
     image="pressionar (2).png"
     font-size="200"
-    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3');set(witness_on, false);set(phoenix_on,true)"
+    on_click="set(show_objection_img, true); set(objection_timing, $dialogue_next); set(objection_stage, 0); playSound('phoenix-objection.mp3');set(witness_on, false);set(judge_on,false);set(phoenix_on,true)"
   />
   </fab-if>
 
@@ -323,11 +323,11 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(objection_stage, 2);playSound('typing.mp3');(judge_on, true);set(witness_on,false)" 
+    on_click="set(objection_stage, 2);playSound('typing.mp3');set(witness_on, false);set(judge_on,true);" 
   />
     </fab-if>
 
-    <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and $objection_stage = 2">
+   <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and $objection_stage = 2">
   <agent 
     id="obj3" 
     text='Ela está certa nesse ponto Veríssimo. O Flávio estava me mostrando antes o quão boa são as notas dela, não vejo motivos pra ela recorrer a algo tão baixo' 
@@ -342,7 +342,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(objection_stage, 0);set(objection_timing,0);set(dialogue_next,9);playSound('typing.mp3')" 
+    on_click="set(objection_stage, 0);set(objection_timing,0);set(dialogue_next,9);playSound('typing.mp3');set(judge_on,false);set(witness_on,true)" 
   />
     </fab-if>
 
@@ -453,6 +453,62 @@
     on_click="set(dialogue_next, 11);playSound('typing.mp3');set(witnsess_on,true)" 
   />
     </fab-if>
+
+    <fab-if when="$dialogue_next = 10 and $objection_timing = 10 and $objection_stage = 0">
+  <agent 
+    id="obj7" 
+    text='IA? Isso agora é só desespero, não faz nenhum sentido.'
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj7"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 1);playSound('typing.mp3');set(phoenix_on, false);set(acusa_on,true);set(show_objection_img,false);set(phoenix_on,false);set(acusa_on,true)" 
+  />
+    </fab-if>
+     <fab-if when="$dialogue_next = 10 and $objection_timing = 10 and $objection_stage = 1">
+  <agent 
+    id="obj8" 
+    text="Você precisa estudar mais sobre IA advogado, elas estão evoluindo muito."
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj8"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(objection_stage, 2);playSound('typing.mp3');set(acusa_on, false);set(judge_on,true);set(show_objection_img,false)" 
+  />
+    </fab-if>
+
+       <fab-if when="$dialogue_next = 10 and $objection_timing = 10 and $objection_stage = 2">
+  <agent 
+    id="obj9" 
+    text="Outro dia vi a Chuu fazendo tigrinho no meu Whatsapp, assustador...."
+    x="36" 
+    y="450" 
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_obj9"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(dialogue_next,8);set(objection_timing,0);set(objection_stage,0);playSound('typing.mp3');set(judge_on, false);set(witness_on,true)" 
+  />
+       </fab-if>
    
 
 
@@ -518,7 +574,209 @@
   />
     </fab-if>
 
+  <!-- ======================== -->
+<!--DIALOGO EVIDENCIA 1 -->
+<!-- ======================== -->   
+  <fab-if when="$dialogue_next = 8 and $evidence_stage = 8">
+  <agent 
+    id="falha_ev1"
+    text='Juiz - "Um celular? Senhor Veríssimo você se superou nessa! Declaro Clara culpada!!"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_ev1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="reset()"
+  />
+  </fab-if>
+
+  
+
+ <!-- ======================== -->
+<!--DIALOGO EVIDENCIA 3 -->
+<!-- ======================== -->  
+
+    <fab-if when="$dialogue_next = 10 and $evidence_stage = 10">
+  <agent 
+    id="falha_ev3"
+    text='Juiz - "O que? Ela usou a IA com esse celular, é isso que você quer dizer? Bom, então declaro Clara culpada!"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="next_ev3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="reset()"
+  />
+  </fab-if>
+
+ <!-- ======================== -->
+<!--DIALOGO EVIDENCIA 2 -->
+<!-- ======================== -->  
+   <fab-if when="$dialogue_next = 9 and $evidence_stage = 9">
+  <agent 
+    id="acerto_ev1"
+    text='Juiz - "Um celular? Isso é mais uma de suas brincadeiras Veríssimo?"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next1"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,10);set(witness_on,false);set(acusa_on,true);set(take_that_img, false)"
+  />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 9 and $evidence_stage = 10">
+  <agent 
+    id="acerto_ev2"
+    text='Ele enloqueceu de vez agora hihihi...' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next2"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,11);set(acusa_on,false);set(phoenix_on,true)"
+  />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 9 and $evidence_stage = 11">
+  <agent 
+    id="acerto_ev3"
+    text='Clara - "Esse celular...É O MEU??"' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next3"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,12);set(acusa_on,false);set(phoenix_on,true)"
+  />
+  </fab-if>
+
+  <fab-if when="$dialogue_next = 9 and $evidence_stage = 12">
+  <agent 
+    id="acerto_ev4"
+    text='Esse celular tem...vamos ver. O aplicativo da UFMA?' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next4"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,13)"
+  />
+  </fab-if>
+
+    <fab-if when="$dialogue_next = 9 and $evidence_stage = 13">
+  <agent 
+    id="acerto_ev5"
+    text='Então...é...com esse celular eu....' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next5"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,14);set(phoenix_on,false);set(judge_on,true)"
+  />
+  </fab-if>
+
+      <fab-if when="$dialogue_next = 9 and $evidence_stage = 14">
+  <agent 
+    id="acerto_ev6"
+    text='Senhor Veríssimo, receio que irei encerrar o caso aqui se não for adcionar mais nada. Todos aqui já querem ir pra fila do----' 
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next6"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,15);set(judge_on,false);set(phoenix_on,true)"
+  />
+  </fab-if>
+
+    <fab-if when="$dialogue_next = 9 and $evidence_stage = 15">
+  <agent 
+    id="acerto_ev7"
+    text='ISSO! Meritíssimo, seria impossível a Clara ter hackeado à distância ou qualquer outra bobagem...uma vez que ela...'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next7"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,16)"
+  />
+  </fab-if>
+
+      <fab-if when="$dialogue_next = 9 and $evidence_stage = 16">
+  <agent 
+    id="acerto_ev8"
+    text='TIROU 3 EM ALGORITMOS'
+    x="36" 
+    y="450"
+    color="white"
+    animation="typewriter"
+  />
+  <agent 
+    id="acerto_next8"
+    text=">>"
+    x="10"
+    y="450"
+    font-size="700"
+    on_click="set(evidence_stage,17);set(judge_on,true;set(phoenix_on,true)"
+  />
+  </fab-if>
 
 
+  
  
 </page>
