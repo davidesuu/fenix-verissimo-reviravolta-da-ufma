@@ -138,7 +138,7 @@
 <fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 0">
   <agent 
     id="obj1" 
-    text='Phoenix - "Interessante... qual era o almoço no dia??"' 
+    text='Veríssimo - "Interessante... qual era o almoço no dia??"' 
     x="36" 
     y="450" 
     animation="typewriter"
@@ -176,7 +176,7 @@
 <fab-if when="$dialogue_next = 1 and $objection_timing = 1 and $objection_stage = 2">
   <agent 
     id="resposta2" 
-    text='Phoenix - "Nenhuma... só queria comer mesmo."' 
+    text='Phoenix - "Nenhuma... senhor..."' 
     x="36" 
     y="450"
     color="white"
@@ -217,7 +217,7 @@
 <fab-if when="$dialogue_next = 2 and $objection_timing = 2 and $objection_stage = 0">
   <agent 
     id="obj2" 
-    text='Phoenix - "Seguindo ela? Me parece meio suspeito... Por que não só chamou ela diretamente?"' 
+    text='Veríssimo - "Seguindo ela? Me parece meio suspeito... Por que não só chamou ela diretamente?"' 
     x="36" 
     y="450" 
     color="white"
@@ -278,7 +278,7 @@
 <fab-if when="$dialogue_next = 3 and $objection_timing = 3 and $objection_stage = 0">
   <agent 
     id="obj3" 
-    text='Phoenix - "Interessante você dizer que viu ela pela janela... Porque se eu me lembro bem, a sala não possui janela nenhuma!"' 
+    text='Veríssimo - "Interessante você dizer que viu ela pela janela... Porque se eu me lembro bem, a sala não possui janela nenhuma!"' 
     x="36" 
     y="450" 
     color="white"
@@ -441,7 +441,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(dialogue_next, 0);goToPage('last_witnessing')"
+    on_click="goToPage('last_witnessing');set(dialogue_next, 0);set(objection_timing,0);set(objection_stage,0);set(evidence_stage_0);goToPage('last_witnessing')"
   />
   </fab-if>
   
