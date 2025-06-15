@@ -20,7 +20,7 @@
   <property name="evidence_stage" default="0" />
   <property name="log_evidencia" default="false" />
   <property name="take_that_img" default="false" />
-  <property name="clara_nome" dafault="false" />
+  <property name="clara_nome" default="true" />
   <start />
   <prologue />
   <prologue_part2 />
