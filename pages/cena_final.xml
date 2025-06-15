@@ -330,7 +330,7 @@
     <fab-if when="$dialogue_next = 8 and $objection_timing = 8 and objection_stage = 2">
   <agent 
     id="obj3" 
-    text='Ela está certa nesse ponto Veríssimo. O Flávio estava me falando antes o quão boa são as notas dela, não vejo motivos pra ela recorrer á algo tão baixo' 
+    text='Ela está certa nesse ponto Veríssimo. O Flávio estava me mostrando antes o quão boa são as notas dela, não vejo motivos pra ela recorrer a algo tão baixo' 
     x="36" 
     y="450" 
     color="white"
@@ -342,7 +342,7 @@
     x="10"
     y="450"
     font-size="700"
-    on_click="set(objection_stage, 2);playSound('typing.mp3')" 
+    on_click="set(objection_stage, 0);playSound('typing.mp3')" 
   />
     </fab-if>
 
