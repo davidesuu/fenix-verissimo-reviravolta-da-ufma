@@ -273,7 +273,7 @@
       <fab-if when="$dialogue_next = 8 and $objection_timing != 8 and $evidence_stage = 0">
   <agent 
     id="fala9" 
-    text='Iris - "I... isso é impossivel, eu vi ela mexendo no PC, está claro foi ela, ela ficou frustrada com a nota e esse foi o motivo!!""' 
+    text='Iris - "I... isso é impossível, eu vi ela mexendo no PC, está claro foi ela, ela ficou frustrada com a nota e esse foi o motivo!!""' 
     x="36" 
     y="450" 
     color="white"
@@ -356,7 +356,7 @@
   <fab-if when="$dialogue_next = 9 and $objection_timing != 9 and $evidence_stage = 0">
   <agent 
     id="fala10" 
-    text='Iris - "Ela deve ter... ter.... Hackeado o pc a distância!! Ou alterado data da minha foto!" ' 
+    text='Iris - "Ela deve ter... ter.... Hackeado o pc à distância!! Ou alterado a data da minha foto!" ' 
     x="36" 
     y="450" 
     color="white"
