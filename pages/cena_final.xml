@@ -136,7 +136,7 @@
  <fab-if when="$dialogue_next = 1 and $objection_timing != 1 and $evidence_stage = 0">
   <agent 
     id="fala2" 
-    text='"Isso mesmo que você ouviu Meritissímo. Como ela falou anteriormente, havia apenas elas duas no local, se houve um acesso anterior, logo só pode ser você Iris!!"' 
+    text='"Isso mesmo que você ouviu Meritíssimo. Como ela falou anteriormente, havia apenas elas duas no local, se houve um acesso anterior, logo só pode ser você Iris!!"' 
     x="36" 
     y="450" 
     color="white"
@@ -212,7 +212,7 @@
       <fab-if when="$dialogue_next = 5 and $objection_timing != 1 and $evidence_stage = 0">
   <agent 
     id="fala6" 
-    text='Iris-"Fi da pest....Quis dizer, isso é loucura, porque eu teria acessado o sistema antes?? Com certeza ela acessou antes de alguma maneira"' 
+    text='Iris - "Fi da pest....Quis dizer, isso é loucura, porque eu teria acessado o sistema antes?? Com certeza ela acessou antes de alguma maneira. Eu consigo explicar!!"' 
     x="36" 
     y="450" 
     color="white"
@@ -273,7 +273,7 @@
       <fab-if when="$dialogue_next = 8 and $objection_timing != 8 and $evidence_stage = 0">
   <agent 
     id="fala9" 
-    text='I... isso é impossivel, eu vi ela mexendo no PC, está claro foi ela, ela ficou frustrada com a nota e esse foi o motivo!!' 
+    text='Iris - "I... isso é impossivel, eu vi ela mexendo no PC, está claro foi ela, ela ficou frustrada com a nota e esse foi o motivo!!""' 
     x="36" 
     y="450" 
     color="white"
